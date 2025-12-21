@@ -31,10 +31,37 @@ export default function ComponentPreview({ htmlCode, colors }: ComponentPreviewP
   const iframeContent = useMemo(() => {
     const shouldCenter = viewMode !== 'desktop';
 
+    // Default colors matching the site theme (from globals.css)
+    const defaultPrimary = {
+      '50': '#f0f9ff',
+      '100': '#e0f2fe',
+      '200': '#bae6fd',
+      '300': '#7dd3fc',
+      '400': '#38bdf8',
+      '500': '#0ea5e9',
+      '600': '#0284c7',
+      '700': '#0369a1',
+      '800': '#075985',
+      '900': '#0c4a6e',
+    };
+
+    const defaultSecondary = {
+      '50': '#faf5ff',
+      '100': '#f3e8ff',
+      '200': '#e9d5ff',
+      '300': '#d8b4fe',
+      '400': '#c084fc',
+      '500': '#a855f7',
+      '600': '#9333ea',
+      '700': '#7e22ce',
+      '800': '#6b21a8',
+      '900': '#581c87',
+    };
+
     // Generate CSS variables from component colors
-    const generateColorVars = (colorObj: Record<string, string> | undefined, prefix: string) => {
-      if (!colorObj) return '';
-      return Object.entries(colorObj)
+    const generateColorVars = (colorObj: Record<string, string> | undefined, prefix: string, defaults: Record<string, string>) => {
+      const finalColors = colorObj || defaults;
+      return Object.entries(finalColors)
         .map(([shade, value]) => {
           // Convert hex to RGB
           const hex = value.replace('#', '');
@@ -46,8 +73,8 @@ export default function ComponentPreview({ htmlCode, colors }: ComponentPreviewP
         .join('\n              ');
     };
 
-    const primaryVars = generateColorVars(colors?.primary, 'primary');
-    const secondaryVars = generateColorVars(colors?.secondary, 'secondary');
+    const primaryVars = generateColorVars(colors?.primary, 'primary', defaultPrimary);
+    const secondaryVars = generateColorVars(colors?.secondary, 'secondary', defaultSecondary);
 
     return `
       <!DOCTYPE html>
@@ -95,15 +122,23 @@ export default function ComponentPreview({ htmlCode, colors }: ComponentPreviewP
 
           <style>
             :root {
-              /* Component-specific colors only - no defaults */
+              /* Component colors with defaults matching site theme */
               ${primaryVars}
               ${secondaryVars}
             }
 
+            * {
+              box-sizing: border-box;
+            }
+
             body {
               margin: 0;
+              padding: 0;
               min-height: 100vh;
               background: ${darkMode ? '#1f2937' : '#ffffff'};
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
               ${shouldCenter ? `
                 display: flex;
                 align-items: center;
