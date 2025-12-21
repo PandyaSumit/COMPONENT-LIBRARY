@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Code2, Zap, Copy, Palette, Sparkles } from 'lucide-react';
-import { components, categories } from '@/data/components';
+import { components, categories } from '@/data';
 
 export default function Home() {
   const featuredComponents = components.filter((c) => c.featured);

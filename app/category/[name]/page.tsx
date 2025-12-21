@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import { components, categories, Category } from '@/data/components';
+import { components, categories, Category } from '@/data';
 import ComponentCard from '@/components/ui/ComponentCard';
 
 export async function generateStaticParams() {
