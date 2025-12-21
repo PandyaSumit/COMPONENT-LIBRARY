@@ -1,3 +1,4 @@
+// Shared types and interfaces
 export interface Component {
   id: string;
   name: string;
