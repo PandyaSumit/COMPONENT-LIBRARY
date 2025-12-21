@@ -150,51 +150,162 @@ export default function GradientHero() {
   {
     id: 'dark-neon-hero-2',
     name: 'Dark Neon Split Hero',
-    description: 'Bold dark mode hero with vibrant neon accents and split layout',
+    description: 'Premium dark mode hero with vibrant neon accents, animated grid, and professional interface mockup',
     category: 'hero',
-    tags: ['dark', 'neon', 'split-layout', 'modern', 'premium'],
+    tags: ['dark', 'neon', 'split-layout', 'modern', 'premium', 'animated'],
     thumbnail: '/images/hero-dark-neon-2.png',
     featured: true,
-    popular: false,
+    popular: true,
     isNew: true,
     htmlCode: `<section class="relative min-h-screen bg-slate-950 overflow-hidden">
-  <!-- Neon glow effects -->
-  <div class="absolute top-20 left-20 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-20 right-20 w-96 h-96 bg-emerald-500/30 rounded-full blur-3xl"></div>
-  
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-    <div class="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
+  <!-- Animated grid background -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+
+  <!-- Multi-layer neon glow effects -->
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+    <div class="absolute -top-40 -left-40 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-20 left-20 w-72 h-72 bg-cyan-400/30 rounded-full blur-[100px]"></div>
+    <div class="absolute -bottom-40 -right-40 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-20 w-72 h-72 bg-emerald-400/30 rounded-full blur-[100px]"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen">
       <!-- Left content -->
-      <div>
-        <div class="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full mb-6">
-          <span class="text-cyan-400 font-semibold">✨ New Release</span>
+      <div class="space-y-8">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/10 to-emerald-500/10 border border-cyan-500/20 rounded-full backdrop-blur-sm">
+          <svg class="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <span class="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">v2.0 Just Launched</span>
         </div>
-        <h1 class="text-6xl md:text-7xl font-bold text-white mb-6">
-          Design the
-          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
-            Future
-          </span>
-        </h1>
-        <p class="text-xl text-slate-300 mb-8 leading-relaxed">
-          Create stunning interfaces with our next-generation design system. Built for speed, designed for impact.
+
+        <!-- Heading -->
+        <div class="space-y-4">
+          <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-none tracking-tight">
+            Design the
+            <span class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 animate-gradient">
+              Future
+            </span>
+          </h1>
+          <div class="flex items-center gap-3 text-cyan-400">
+            <div class="h-px w-12 bg-gradient-to-r from-transparent to-cyan-400"></div>
+            <span class="text-sm font-medium tracking-wider uppercase">Next-Gen Design System</span>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-xl">
+          Create stunning, performant interfaces with our revolutionary design system. Built for developers who demand excellence.
         </p>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-6 py-6">
+          <div class="space-y-1">
+            <div class="text-2xl sm:text-3xl font-bold text-white">10x</div>
+            <div class="text-xs sm:text-sm text-slate-400">Faster</div>
+          </div>
+          <div class="space-y-1">
+            <div class="text-2xl sm:text-3xl font-bold text-white">99.9%</div>
+            <div class="text-xs sm:text-sm text-slate-400">Uptime</div>
+          </div>
+          <div class="space-y-1">
+            <div class="text-2xl sm:text-3xl font-bold text-white">500K+</div>
+            <div class="text-xs sm:text-sm text-slate-400">Users</div>
+          </div>
+        </div>
+
+        <!-- CTAs -->
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-emerald-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all">
-            Get Started
+          <a href="#" class="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-emerald-500 text-white rounded-xl font-semibold overflow-hidden transition-all hover:shadow-xl hover:shadow-cyan-500/50 hover:scale-105 active:scale-95">
+            <span class="relative z-10 flex items-center justify-center gap-2">
+              Get Started Free
+              <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </span>
+            <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </a>
-          <a href="#" class="px-8 py-4 bg-white/5 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors backdrop-blur-sm border border-white/10">
-            View Demo
+          <a href="#" class="group px-8 py-4 bg-white/5 text-white rounded-xl font-semibold backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Watch Demo
           </a>
         </div>
       </div>
-      
+
       <!-- Right mockup -->
-      <div class="relative">
-        <div class="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-500/20 shadow-2xl shadow-cyan-500/20">
-          <div class="space-y-4">
-            <div class="h-4 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded w-3/4"></div>
-            <div class="h-4 bg-slate-700 rounded w-1/2"></div>
-            <div class="h-32 bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 rounded-lg"></div>
+      <div class="relative lg:h-[600px] flex items-center justify-center">
+        <!-- Glow behind mockup -->
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 blur-3xl rounded-3xl"></div>
+
+        <!-- Main mockup container -->
+        <div class="relative w-full max-w-lg">
+          <!-- Window chrome -->
+          <div class="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-xl overflow-hidden">
+            <!-- Title bar -->
+            <div class="flex items-center justify-between px-6 py-4 border-b border-white/10">
+              <div class="flex items-center gap-2">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <div class="text-xs text-slate-400 font-mono">dashboard.app</div>
+            </div>
+
+            <!-- Content area -->
+            <div class="p-6 space-y-6">
+              <!-- Header -->
+              <div class="flex items-center justify-between">
+                <div class="space-y-2">
+                  <div class="h-3 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded w-32"></div>
+                  <div class="h-2 bg-slate-700 rounded w-24"></div>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-emerald-500"></div>
+              </div>
+
+              <!-- Stats cards -->
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-slate-800/50 rounded-xl p-4 border border-cyan-500/20">
+                  <div class="h-2 bg-slate-700 rounded w-16 mb-3"></div>
+                  <div class="h-6 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded w-20"></div>
+                </div>
+                <div class="bg-slate-800/50 rounded-xl p-4 border border-emerald-500/20">
+                  <div class="h-2 bg-slate-700 rounded w-16 mb-3"></div>
+                  <div class="h-6 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded w-20"></div>
+                </div>
+              </div>
+
+              <!-- Chart area -->
+              <div class="bg-slate-800/30 rounded-xl p-6 border border-white/5">
+                <div class="flex items-end justify-between h-32 gap-2">
+                  <div class="w-full bg-gradient-to-t from-cyan-500 to-cyan-400 rounded-t" style="height: 60%"></div>
+                  <div class="w-full bg-gradient-to-t from-emerald-500 to-emerald-400 rounded-t" style="height: 80%"></div>
+                  <div class="w-full bg-gradient-to-t from-cyan-500 to-cyan-400 rounded-t" style="height: 45%"></div>
+                  <div class="w-full bg-gradient-to-t from-emerald-500 to-emerald-400 rounded-t" style="height: 90%"></div>
+                  <div class="w-full bg-gradient-to-t from-cyan-500 to-cyan-400 rounded-t" style="height: 70%"></div>
+                </div>
+              </div>
+
+              <!-- Footer actions -->
+              <div class="flex gap-3">
+                <div class="flex-1 h-10 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-lg"></div>
+                <div class="w-10 h-10 bg-slate-700 rounded-lg"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating accent card -->
+          <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-gradient-to-br from-purple-500/90 to-pink-500/90 rounded-2xl border border-white/20 backdrop-blur-xl p-4 shadow-xl">
+            <div class="space-y-2">
+              <div class="w-8 h-8 bg-white/20 rounded-lg"></div>
+              <div class="h-2 bg-white/30 rounded w-16"></div>
+              <div class="h-2 bg-white/20 rounded w-12"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -204,43 +315,154 @@ export default function GradientHero() {
     reactCode: `export default function DarkNeonHero() {
   return (
     <section className="relative min-h-screen bg-slate-950 overflow-hidden">
-      {/* Neon glow effects */}
-      <div className="absolute top-20 left-20 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-emerald-500/30 rounded-full blur-3xl"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
+      {/* Animated grid background */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+
+      {/* Multi-layer neon glow effects */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="absolute -top-40 -left-40 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-400/30 rounded-full blur-[100px]"></div>
+        <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-emerald-400/30 rounded-full blur-[100px]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen">
           {/* Left content */}
-          <div>
-            <div className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full mb-6">
-              <span className="text-cyan-400 font-semibold">✨ New Release</span>
+          <div className="space-y-8">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/10 to-emerald-500/10 border border-cyan-500/20 rounded-full backdrop-blur-sm">
+              <svg className="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+              <span className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">v2.0 Just Launched</span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
-              Design the
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
-                Future
-              </span>
-            </h1>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Create stunning interfaces with our next-generation design system. Built for speed, designed for impact.
+
+            {/* Heading */}
+            <div className="space-y-4">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-none tracking-tight">
+                Design the
+                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400">
+                  Future
+                </span>
+              </h1>
+              <div className="flex items-center gap-3 text-cyan-400">
+                <div className="h-px w-12 bg-gradient-to-r from-transparent to-cyan-400"></div>
+                <span className="text-sm font-medium tracking-wider uppercase">Next-Gen Design System</span>
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-xl">
+              Create stunning, performant interfaces with our revolutionary design system. Built for developers who demand excellence.
             </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 py-6">
+              <div className="space-y-1">
+                <div className="text-2xl sm:text-3xl font-bold text-white">10x</div>
+                <div className="text-xs sm:text-sm text-slate-400">Faster</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-2xl sm:text-3xl font-bold text-white">99.9%</div>
+                <div className="text-xs sm:text-sm text-slate-400">Uptime</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-2xl sm:text-3xl font-bold text-white">500K+</div>
+                <div className="text-xs sm:text-sm text-slate-400">Users</div>
+              </div>
+            </div>
+
+            {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-emerald-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all">
-                Get Started
+              <a href="#" className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-emerald-500 text-white rounded-xl font-semibold overflow-hidden transition-all hover:shadow-xl hover:shadow-cyan-500/50 hover:scale-105 active:scale-95">
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  Get Started Free
+                  <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </a>
-              <a href="#" className="px-8 py-4 bg-white/5 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors backdrop-blur-sm border border-white/10">
-                View Demo
+              <a href="#" className="group px-8 py-4 bg-white/5 text-white rounded-xl font-semibold backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all flex items-center justify-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Watch Demo
               </a>
             </div>
           </div>
-          
+
           {/* Right mockup */}
-          <div className="relative">
-            <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-500/20 shadow-2xl shadow-cyan-500/20">
-              <div className="space-y-4">
-                <div className="h-4 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded w-3/4"></div>
-                <div className="h-4 bg-slate-700 rounded w-1/2"></div>
-                <div className="h-32 bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 rounded-lg"></div>
+          <div className="relative lg:h-[600px] flex items-center justify-center">
+            {/* Glow behind mockup */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 blur-3xl rounded-3xl"></div>
+
+            {/* Main mockup container */}
+            <div className="relative w-full max-w-lg">
+              {/* Window chrome */}
+              <div className="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-xl overflow-hidden">
+                {/* Title bar */}
+                <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                  <div className="text-xs text-slate-400 font-mono">dashboard.app</div>
+                </div>
+
+                {/* Content area */}
+                <div className="p-6 space-y-6">
+                  {/* Header */}
+                  <div className="flex items-center justify-between">
+                    <div className="space-y-2">
+                      <div className="h-3 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded w-32"></div>
+                      <div className="h-2 bg-slate-700 rounded w-24"></div>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-emerald-500"></div>
+                  </div>
+
+                  {/* Stats cards */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-slate-800/50 rounded-xl p-4 border border-cyan-500/20">
+                      <div className="h-2 bg-slate-700 rounded w-16 mb-3"></div>
+                      <div className="h-6 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded w-20"></div>
+                    </div>
+                    <div className="bg-slate-800/50 rounded-xl p-4 border border-emerald-500/20">
+                      <div className="h-2 bg-slate-700 rounded w-16 mb-3"></div>
+                      <div className="h-6 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded w-20"></div>
+                    </div>
+                  </div>
+
+                  {/* Chart area */}
+                  <div className="bg-slate-800/30 rounded-xl p-6 border border-white/5">
+                    <div className="flex items-end justify-between h-32 gap-2">
+                      <div className="w-full bg-gradient-to-t from-cyan-500 to-cyan-400 rounded-t" style={{height: '60%'}}></div>
+                      <div className="w-full bg-gradient-to-t from-emerald-500 to-emerald-400 rounded-t" style={{height: '80%'}}></div>
+                      <div className="w-full bg-gradient-to-t from-cyan-500 to-cyan-400 rounded-t" style={{height: '45%'}}></div>
+                      <div className="w-full bg-gradient-to-t from-emerald-500 to-emerald-400 rounded-t" style={{height: '90%'}}></div>
+                      <div className="w-full bg-gradient-to-t from-cyan-500 to-cyan-400 rounded-t" style={{height: '70%'}}></div>
+                    </div>
+                  </div>
+
+                  {/* Footer actions */}
+                  <div className="flex gap-3">
+                    <div className="flex-1 h-10 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-lg"></div>
+                    <div className="w-10 h-10 bg-slate-700 rounded-lg"></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating accent card */}
+              <div className="absolute -right-6 -bottom-6 w-32 h-32 bg-gradient-to-br from-purple-500/90 to-pink-500/90 rounded-2xl border border-white/20 backdrop-blur-xl p-4 shadow-xl">
+                <div className="space-y-2">
+                  <div className="w-8 h-8 bg-white/20 rounded-lg"></div>
+                  <div className="h-2 bg-white/30 rounded w-16"></div>
+                  <div className="h-2 bg-white/20 rounded w-12"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -251,43 +473,144 @@ export default function GradientHero() {
 }`,
     vueCode: `<template>
   <section class="relative min-h-screen bg-slate-950 overflow-hidden">
-    <!-- Neon glow effects -->
-    <div class="absolute top-20 left-20 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-20 right-20 w-96 h-96 bg-emerald-500/30 rounded-full blur-3xl"></div>
-    
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-      <div class="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
+    <!-- Animated grid background -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+
+    <!-- Multi-layer neon glow effects -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <div class="absolute -top-40 -left-40 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute top-20 left-20 w-72 h-72 bg-cyan-400/30 rounded-full blur-[100px]"></div>
+      <div class="absolute -bottom-40 -right-40 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-20 w-72 h-72 bg-emerald-400/30 rounded-full blur-[100px]"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen">
         <!-- Left content -->
-        <div>
-          <div class="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full mb-6">
-            <span class="text-cyan-400 font-semibold">✨ New Release</span>
+        <div class="space-y-8">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/10 to-emerald-500/10 border border-cyan-500/20 rounded-full backdrop-blur-sm">
+            <svg class="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <span class="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">v2.0 Just Launched</span>
           </div>
-          <h1 class="text-6xl md:text-7xl font-bold text-white mb-6">
-            Design the
-            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
-              Future
-            </span>
-          </h1>
-          <p class="text-xl text-slate-300 mb-8 leading-relaxed">
-            Create stunning interfaces with our next-generation design system. Built for speed, designed for impact.
+
+          <!-- Heading -->
+          <div class="space-y-4">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-none tracking-tight">
+              Design the
+              <span class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400">
+                Future
+              </span>
+            </h1>
+            <div class="flex items-center gap-3 text-cyan-400">
+              <div class="h-px w-12 bg-gradient-to-r from-transparent to-cyan-400"></div>
+              <span class="text-sm font-medium tracking-wider uppercase">Next-Gen Design System</span>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-xl">
+            Create stunning, performant interfaces with our revolutionary design system. Built for developers who demand excellence.
           </p>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-6 py-6">
+            <div class="space-y-1">
+              <div class="text-2xl sm:text-3xl font-bold text-white">10x</div>
+              <div class="text-xs sm:text-sm text-slate-400">Faster</div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-2xl sm:text-3xl font-bold text-white">99.9%</div>
+              <div class="text-xs sm:text-sm text-slate-400">Uptime</div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-2xl sm:text-3xl font-bold text-white">500K+</div>
+              <div class="text-xs sm:text-sm text-slate-400">Users</div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
           <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-emerald-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all">
-              Get Started
+            <a href="#" class="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-emerald-500 text-white rounded-xl font-semibold overflow-hidden transition-all hover:shadow-xl hover:shadow-cyan-500/50 hover:scale-105 active:scale-95">
+              <span class="relative z-10 flex items-center justify-center gap-2">
+                Get Started Free
+                <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
+              </span>
+              <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            <a href="#" class="px-8 py-4 bg-white/5 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors backdrop-blur-sm border border-white/10">
-              View Demo
+            <a href="#" class="group px-8 py-4 bg-white/5 text-white rounded-xl font-semibold backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Watch Demo
             </a>
           </div>
         </div>
-        
-        <!-- Right mockup -->
-        <div class="relative">
-          <div class="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-500/20 shadow-2xl shadow-cyan-500/20">
-            <div class="space-y-4">
-              <div class="h-4 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded w-3/4"></div>
-              <div class="h-4 bg-slate-700 rounded w-1/2"></div>
-              <div class="h-32 bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 rounded-lg"></div>
+
+        <!-- Right mockup (same as React but with v-bind for styles if needed) -->
+        <div class="relative lg:h-[600px] flex items-center justify-center">
+          <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 blur-3xl rounded-3xl"></div>
+
+          <div class="relative w-full max-w-lg">
+            <div class="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-xl overflow-hidden">
+              <div class="flex items-center justify-between px-6 py-4 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div class="text-xs text-slate-400 font-mono">dashboard.app</div>
+              </div>
+
+              <div class="p-6 space-y-6">
+                <div class="flex items-center justify-between">
+                  <div class="space-y-2">
+                    <div class="h-3 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded w-32"></div>
+                    <div class="h-2 bg-slate-700 rounded w-24"></div>
+                  </div>
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-emerald-500"></div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="bg-slate-800/50 rounded-xl p-4 border border-cyan-500/20">
+                    <div class="h-2 bg-slate-700 rounded w-16 mb-3"></div>
+                    <div class="h-6 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded w-20"></div>
+                  </div>
+                  <div class="bg-slate-800/50 rounded-xl p-4 border border-emerald-500/20">
+                    <div class="h-2 bg-slate-700 rounded w-16 mb-3"></div>
+                    <div class="h-6 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded w-20"></div>
+                  </div>
+                </div>
+
+                <div class="bg-slate-800/30 rounded-xl p-6 border border-white/5">
+                  <div class="flex items-end justify-between h-32 gap-2">
+                    <div class="w-full bg-gradient-to-t from-cyan-500 to-cyan-400 rounded-t" style="height: 60%"></div>
+                    <div class="w-full bg-gradient-to-t from-emerald-500 to-emerald-400 rounded-t" style="height: 80%"></div>
+                    <div class="w-full bg-gradient-to-t from-cyan-500 to-cyan-400 rounded-t" style="height: 45%"></div>
+                    <div class="w-full bg-gradient-to-t from-emerald-500 to-emerald-400 rounded-t" style="height: 90%"></div>
+                    <div class="w-full bg-gradient-to-t from-cyan-500 to-cyan-400 rounded-t" style="height: 70%"></div>
+                  </div>
+                </div>
+
+                <div class="flex gap-3">
+                  <div class="flex-1 h-10 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-lg"></div>
+                  <div class="w-10 h-10 bg-slate-700 rounded-lg"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-gradient-to-br from-purple-500/90 to-pink-500/90 rounded-2xl border border-white/20 backdrop-blur-xl p-4 shadow-xl">
+              <div class="space-y-2">
+                <div class="w-8 h-8 bg-white/20 rounded-lg"></div>
+                <div class="h-2 bg-white/30 rounded w-16"></div>
+                <div class="h-2 bg-white/20 rounded w-12"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -297,11 +620,11 @@ export default function GradientHero() {
 </template>
 
 <script setup>
-// No script needed
+// Component ready to use
 </script>`,
     dependencies: ['tailwindcss'],
-    usage: 'Perfect for modern SaaS products and tech startups. The dark theme with neon accents creates a cutting-edge feel.',
-    customizationTips: 'Adjust the neon colors (cyan/emerald) to match your brand. Add animation to the glow effects for extra impact.',
+    usage: 'Premium dark hero perfect for SaaS products, tech startups, and modern applications. Features animated grid background, multi-layer neon effects, stats display, and professional dashboard mockup.',
+    customizationTips: 'Customize the neon colors (cyan/emerald/purple) to match your brand. Adjust stats values and labels. Modify the mockup content to showcase your actual product. Add CSS animations for the gradient text and glow effects for extra polish.',
     createdAt: '2024-12-21',
     updatedAt: '2024-12-21',
     views: 0,
