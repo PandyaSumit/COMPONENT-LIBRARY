@@ -156,7 +156,7 @@ export default function Sidebar({ selectedCategory, onCategoryChange }: SidebarP
                   Need Help?
                 </h4>
                 <p className="text-xs text-neutral-600 leading-relaxed">
-                  Can't find what you're looking for?
+                  Can&apos;t find what you&apos;re looking for?
                 </p>
               </div>
             </div>
