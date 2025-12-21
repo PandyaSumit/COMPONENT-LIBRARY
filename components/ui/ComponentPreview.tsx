@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { Monitor, Tablet, Smartphone, Moon, Sun } from 'lucide-react';
 
 type ViewMode = 'desktop' | 'tablet' | 'mobile';
@@ -12,7 +12,6 @@ interface ComponentPreviewProps {
 export default function ComponentPreview({ htmlCode }: ComponentPreviewProps) {
   const [viewMode, setViewMode] = useState<ViewMode>('desktop');
   const [darkMode, setDarkMode] = useState(false);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const viewModeWidths = {
     desktop: '100%',
@@ -20,77 +19,68 @@ export default function ComponentPreview({ htmlCode }: ComponentPreviewProps) {
     mobile: '375px',
   };
 
-  useEffect(() => {
-    if (iframeRef.current) {
-      const iframe = iframeRef.current;
-      const doc = iframe.contentDocument || iframe.contentWindow?.document;
-
-      if (doc) {
-        doc.open();
-        doc.write(`
-          <!DOCTYPE html>
-          <html${darkMode ? ' class="dark"' : ''}>
-          <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script src="https://cdn.tailwindcss.com"></script>
-            <script>
-              tailwind.config = {
-                darkMode: 'class',
-                theme: {
-                  extend: {
-                    colors: {
-                      primary: {
-                        50: '#eef2ff',
-                        100: '#e0e7ff',
-                        200: '#c7d2fe',
-                        300: '#a5b4fc',
-                        400: '#818cf8',
-                        500: '#6366f1',
-                        600: '#4f46e5',
-                        700: '#4338ca',
-                        800: '#3730a3',
-                        900: '#312e81',
-                        950: '#1e1b4b',
-                      },
-                      secondary: {
-                        50: '#fdf4ff',
-                        100: '#fae8ff',
-                        200: '#f5d0fe',
-                        300: '#f0abfc',
-                        400: '#e879f9',
-                        500: '#ec4899',
-                        600: '#db2777',
-                        700: '#be185d',
-                        800: '#9d174d',
-                        900: '#831843',
-                        950: '#500724',
-                      },
-                    },
+  const iframeContent = useMemo(() => {
+    return `
+      <!DOCTYPE html>
+      <html${darkMode ? ' class="dark"' : ''}>
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"><\/script>
+        <script>
+          tailwind.config = {
+            darkMode: 'class',
+            theme: {
+              extend: {
+                colors: {
+                  primary: {
+                    50: '#eef2ff',
+                    100: '#e0e7ff',
+                    200: '#c7d2fe',
+                    300: '#a5b4fc',
+                    400: '#818cf8',
+                    500: '#6366f1',
+                    600: '#4f46e5',
+                    700: '#4338ca',
+                    800: '#3730a3',
+                    900: '#312e81',
+                    950: '#1e1b4b',
+                  },
+                  secondary: {
+                    50: '#fdf4ff',
+                    100: '#fae8ff',
+                    200: '#f5d0fe',
+                    300: '#f0abfc',
+                    400: '#e879f9',
+                    500: '#ec4899',
+                    600: '#db2777',
+                    700: '#be185d',
+                    800: '#9d174d',
+                    900: '#831843',
+                    950: '#500724',
                   },
                 },
-              };
-            </script>
-            <style>
-              body {
-                margin: 0;
-                padding: 0;
-                min-height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              }
-              ${darkMode ? 'body { background-color: #1f2937; }' : ''}
-            </style>
-          </head>
-          <body>
-            ${htmlCode}
-          </body>
-          </html>
-        `);
-        doc.close();
-      }
-    }
+              },
+            },
+          };
+        <\/script>
+        <style>
+          body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          ${darkMode ? 'body { background-color: #1f2937; }' : ''}
+        </style>
+      </head>
+      <body>
+        ${htmlCode}
+      </body>
+      </html>
+    `;
   }, [htmlCode, darkMode]);
 
   return (
@@ -171,7 +161,7 @@ export default function ComponentPreview({ htmlCode }: ComponentPreviewProps) {
           }}
         >
           <iframe
-            ref={iframeRef}
+            srcDoc={iframeContent}
             className="w-full border-0 min-h-[400px]"
             title="Component Preview"
             sandbox="allow-scripts"
