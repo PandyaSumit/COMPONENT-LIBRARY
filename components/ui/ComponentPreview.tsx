@@ -94,64 +94,77 @@ export default function ComponentPreview({ htmlCode }: ComponentPreviewProps) {
   }, [htmlCode, darkMode]);
 
   return (
-    <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+    <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
       {/* Controls */}
-      <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-gray-50">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 px-6 py-4 border-b border-gray-200 bg-gray-50">
         {/* View Mode Toggle */}
-        <div className="flex items-center gap-2 bg-white rounded-lg p-1 border border-gray-200">
-          <button
-            onClick={() => setViewMode('desktop')}
-            className={`p-2 rounded transition-colors ${
-              viewMode === 'desktop'
-                ? 'bg-primary-600 text-white'
-                : 'text-gray-600 hover:bg-gray-100'
-            }`}
-            title="Desktop view"
-          >
-            <Monitor className="h-4 w-4" />
-          </button>
-          <button
-            onClick={() => setViewMode('tablet')}
-            className={`p-2 rounded transition-colors ${
-              viewMode === 'tablet'
-                ? 'bg-primary-600 text-white'
-                : 'text-gray-600 hover:bg-gray-100'
-            }`}
-            title="Tablet view"
-          >
-            <Tablet className="h-4 w-4" />
-          </button>
-          <button
-            onClick={() => setViewMode('mobile')}
-            className={`p-2 rounded transition-colors ${
-              viewMode === 'mobile'
-                ? 'bg-primary-600 text-white'
-                : 'text-gray-600 hover:bg-gray-100'
-            }`}
-            title="Mobile view"
-          >
-            <Smartphone className="h-4 w-4" />
-          </button>
+        <div className="flex items-center gap-3">
+          <span className="text-sm font-medium text-gray-700">View:</span>
+          <div className="flex items-center gap-1 bg-white rounded-md p-1 border border-gray-200 shadow-sm">
+            <button
+              onClick={() => setViewMode('desktop')}
+              className={`px-3 py-1.5 rounded text-sm font-medium transition-all ${
+                viewMode === 'desktop'
+                  ? 'bg-primary-600 text-white shadow-sm'
+                  : 'text-gray-600 hover:bg-gray-50'
+              }`}
+              title="Desktop view"
+            >
+              <Monitor className="h-4 w-4" />
+            </button>
+            <button
+              onClick={() => setViewMode('tablet')}
+              className={`px-3 py-1.5 rounded text-sm font-medium transition-all ${
+                viewMode === 'tablet'
+                  ? 'bg-primary-600 text-white shadow-sm'
+                  : 'text-gray-600 hover:bg-gray-50'
+              }`}
+              title="Tablet view"
+            >
+              <Tablet className="h-4 w-4" />
+            </button>
+            <button
+              onClick={() => setViewMode('mobile')}
+              className={`px-3 py-1.5 rounded text-sm font-medium transition-all ${
+                viewMode === 'mobile'
+                  ? 'bg-primary-600 text-white shadow-sm'
+                  : 'text-gray-600 hover:bg-gray-50'
+              }`}
+              title="Mobile view"
+            >
+              <Smartphone className="h-4 w-4" />
+            </button>
+          </div>
         </div>
 
         {/* Dark Mode Toggle */}
         <button
           onClick={() => setDarkMode(!darkMode)}
-          className="p-2 rounded-lg bg-white border border-gray-200 text-gray-600 hover:bg-gray-100 transition-colors"
-          title={darkMode ? 'Light mode' : 'Dark mode'}
+          className={`px-4 py-2 rounded-md text-sm font-medium transition-all flex items-center gap-2 ${
+            darkMode
+              ? 'bg-gray-800 text-white hover:bg-gray-700'
+              : 'bg-white border border-gray-200 text-gray-700 hover:bg-gray-50'
+          }`}
+          title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
         >
           {darkMode ? (
-            <Sun className="h-4 w-4" />
+            <>
+              <Sun className="h-4 w-4" />
+              <span className="hidden sm:inline">Light</span>
+            </>
           ) : (
-            <Moon className="h-4 w-4" />
+            <>
+              <Moon className="h-4 w-4" />
+              <span className="hidden sm:inline">Dark</span>
+            </>
           )}
         </button>
       </div>
 
       {/* Preview Container */}
-      <div className="bg-gray-100 p-8 min-h-[500px] flex items-center justify-center overflow-auto">
+      <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 min-h-[500px] flex items-center justify-center overflow-auto">
         <div
-          className="bg-white shadow-lg transition-all duration-300 mx-auto"
+          className="bg-white rounded-lg shadow-xl transition-all duration-300 mx-auto overflow-hidden"
           style={{
             width: viewModeWidths[viewMode],
             maxWidth: '100%',
@@ -163,6 +176,21 @@ export default function ComponentPreview({ htmlCode }: ComponentPreviewProps) {
             title="Component Preview"
             sandbox="allow-scripts"
           />
+        </div>
+      </div>
+
+      {/* Info Bar */}
+      <div className="px-6 py-3 bg-gray-50 border-t border-gray-200">
+        <div className="flex items-center justify-between text-xs text-gray-600">
+          <span className="font-medium">
+            Current width:{' '}
+            <span className="text-gray-900">
+              {viewMode === 'desktop' ? '100%' : viewModeWidths[viewMode]}
+            </span>
+          </span>
+          <span className="text-gray-500">
+            Preview updates in real-time
+          </span>
         </div>
       </div>
     </div>

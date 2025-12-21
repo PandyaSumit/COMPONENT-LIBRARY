@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Code2, Zap, Copy, Palette } from 'lucide-react';
+import { ArrowRight, Code2, Zap, Copy, Palette, Sparkles } from 'lucide-react';
 import { components, categories } from '@/data/components';
 
 export default function Home() {
@@ -14,44 +14,62 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary-600 via-secondary-500 to-primary-800 py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 animate-fadeIn">
-              Beautiful Components for
-              <span className="block text-secondary-200">Modern Web Apps</span>
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary-600 via-secondary-500 to-primary-800">
+        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:32px_32px]" />
+        <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-8 border border-white/20">
+              <Sparkles className="h-4 w-4" />
+              <span>200+ Production-Ready Components</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              Beautiful Components for{' '}
+              <span className="bg-gradient-to-r from-secondary-200 to-white bg-clip-text text-transparent">
+                Modern Web Apps
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto">
+
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
               Copy and paste production-ready UI components built with Tailwind CSS.
               Save hours of development time with our comprehensive library.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/components"
-                className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+                className="group inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105"
               >
                 Browse Components
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
                 href="#features"
-                className="inline-flex items-center px-8 py-4 bg-white/10 text-white rounded-lg font-semibold hover:bg-white/20 transition-colors backdrop-blur-sm"
+                className="inline-flex items-center px-8 py-4 bg-white/10 text-white rounded-lg font-semibold hover:bg-white/20 transition-all backdrop-blur-sm border border-white/20"
               >
                 Learn More
               </a>
             </div>
           </div>
         </div>
+
+        {/* Decorative gradient orbs */}
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-secondary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000" />
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-white border-b border-gray-200">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-4xl font-bold text-primary-600 mb-2">{stat.value}</div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+            {stats.map((stat, index) => (
+              <div key={stat.label} className="text-center group">
+                <div className="text-5xl font-bold bg-gradient-to-br from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform">
+                  {stat.value}
+                </div>
+                <div className="text-gray-600 font-medium text-sm uppercase tracking-wider">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -59,44 +77,44 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="features" className="py-24 bg-gray-50">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Everything You Need to Build Faster
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Professional components designed for developers who value speed and quality
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <Copy className="h-6 w-6 text-primary-600" />
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="group bg-white rounded-lg p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all">
+              <div className="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Copy className="h-7 w-7 text-primary-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Copy & Paste</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Copy & Paste</h3>
+              <p className="text-gray-600 leading-relaxed">
                 One-click copy for all components. Get the code you need instantly in HTML, React, or Vue.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4">
-                <Code2 className="h-6 w-6 text-secondary-600" />
+            <div className="group bg-white rounded-lg p-8 border border-gray-200 hover:border-secondary-300 hover:shadow-xl transition-all">
+              <div className="w-14 h-14 bg-gradient-to-br from-secondary-100 to-secondary-200 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Code2 className="h-7 w-7 text-secondary-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Production Ready</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Production Ready</h3>
+              <p className="text-gray-600 leading-relaxed">
                 All components are tested, accessible, and ready for production use in your projects.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <Palette className="h-6 w-6 text-primary-600" />
+            <div className="group bg-white rounded-lg p-8 border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all">
+              <div className="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Palette className="h-7 w-7 text-primary-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Fully Customizable</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Fully Customizable</h3>
+              <p className="text-gray-600 leading-relaxed">
                 Built with Tailwind CSS utility classes. Customize colors, spacing, and more with ease.
               </p>
             </div>
