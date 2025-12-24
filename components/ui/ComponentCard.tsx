@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Component } from '@/data/components';
+import ComponentCardPreview from './ComponentCardPreview';
 
 interface ComponentCardProps {
   component: Component;
@@ -10,16 +13,9 @@ export default function ComponentCard({ component }: ComponentCardProps) {
   return (
     <Link href={`/component/${component.id}`}>
       <div className="group bg-white rounded-xl border border-neutral-200 overflow-hidden hover:border-primary-300 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-        {/* Thumbnail with instant preview */}
-        <div className="relative aspect-[4/3] bg-gradient-to-br from-neutral-50 via-white to-neutral-50 border-b border-neutral-200 overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center p-8">
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg" />
-              </div>
-              <p className="text-xs text-neutral-400 font-medium">Live Preview</p>
-            </div>
-          </div>
+        {/* Live Component Preview */}
+        <div className="relative aspect-[4/3] border-b border-neutral-200 overflow-hidden">
+          <ComponentCardPreview htmlCode={component.htmlCode} cssCode={component.cssCode} />
 
           {/* Status Badge - Only show if new */}
           {component.isNew && (
