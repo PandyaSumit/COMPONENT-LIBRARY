@@ -59,7 +59,7 @@ export default function Sidebar({ selectedCategory, onCategoryChange }: SidebarP
       {/* Sidebar */}
       <aside 
         className={`
-          fixed lg:sticky top-0 left-0 h-screen w-72 bg-white border-r border-neutral-200
+          fixed lg:sticky top-0 lg:top-16 left-0 h-screen lg:h-[calc(100vh-4rem)] w-72 bg-white border-r border-neutral-200
           flex flex-col z-50 transition-transform duration-300 lg:translate-x-0
           ${isMobileOpen ? 'translate-x-0' : '-translate-x-full'}
         `}

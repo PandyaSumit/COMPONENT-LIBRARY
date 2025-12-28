@@ -7,13 +7,14 @@ type ViewMode = 'desktop' | 'tablet' | 'mobile';
 
 interface ComponentPreviewProps {
   htmlCode: string;
+  category?: string;
   colors?: {
     primary?: Record<string, string>;
     secondary?: Record<string, string>;
   };
 }
 
-export default function ComponentPreview({ htmlCode, colors }: ComponentPreviewProps) {
+export default function ComponentPreview({ htmlCode, category, colors }: ComponentPreviewProps) {
   const [viewMode, setViewMode] = useState<ViewMode>('desktop');
   const [darkMode, setDarkMode] = useState(false);
 
@@ -133,19 +134,15 @@ export default function ComponentPreview({ htmlCode, colors }: ComponentPreviewP
 
             body {
               margin: 0;
-              padding: 0;
+              padding: ${category === 'navigation' ? '0' : '2rem'};
               min-height: 100vh;
               background: ${darkMode ? '#1f2937' : '#ffffff'};
               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
-              ${shouldCenter ? `
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              ` : `
-                display: block;
-              `}
+              display: ${category === 'navigation' ? 'block' : 'flex'};
+              ${category === 'navigation' ? '' : 'align-items: center;'}
+              ${category === 'navigation' ? '' : 'justify-content: center;'}
             }
           </style>
         </head>

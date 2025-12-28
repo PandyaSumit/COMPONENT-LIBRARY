@@ -139,7 +139,7 @@ export default async function ComponentDetailPage({ params }: PageProps) {
             </p>
           </div>
 
-          <ComponentPreview htmlCode={component.htmlCode} colors={component.colors} />
+          <ComponentPreview htmlCode={component.htmlCode} category={component.category} colors={component.colors} />
         </section>
 
         {/* Code */}
