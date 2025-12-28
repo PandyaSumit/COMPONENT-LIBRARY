@@ -3,48 +3,55 @@ import { Component } from '../components';
 export const heroComponents: Component[] = [
   {
     id: 'gradient-hero-1',
-    name: 'Gradient Hero with CTA',
-    description: 'Premium responsive hero section with gradient background, glow effects, dark mode support, and call-to-action buttons',
+    name: 'Responsive Gradient Hero',
+    description:
+      'Preview-safe, fully responsive hero section with adaptive gradient, scalable glow, dark/light mode support, and clean CTA layout',
     category: 'hero',
-    tags: ['gradient', 'cta', 'modern', 'responsive', 'premium', 'dark-mode'],
-    thumbnail: '/images/hero-gradient-1.png',
+    tags: ['gradient', 'cta', 'responsive', 'dark-mode', 'preview-safe'],
     featured: true,
     popular: true,
     isNew: true,
+    thumbnail: '/images/hero-gradient-1.png',
 
     htmlCode: `
 <section class="relative overflow-hidden bg-gradient-to-br from-primary-600 via-secondary-500 to-primary-800 dark:from-primary-900 dark:via-secondary-800 dark:to-primary-950">
   <!-- Glow -->
-  <div class="absolute inset-0 -z-10">
-    <div class="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/30 dark:bg-white/10 blur-[140px]"></div>
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/30 blur-[100px] sm:h-96 sm:w-96 dark:bg-white/10"></div>
   </div>
 
-  <div class="relative mx-auto flex min-h-[90vh] max-w-7xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center">
-    <span class="mb-4 inline-flex items-center rounded-full bg-white/15 dark:bg-white/10 px-4 py-1 text-sm font-medium text-white backdrop-blur">
-      🚀 Launch faster
-    </span>
-
-    <h1 class="mb-6 max-w-5xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-      Build Faster with
-      <span class="block bg-gradient-to-r from-white to-secondary-200 dark:from-white dark:to-secondary-300 bg-clip-text text-transparent">
-        Beautiful Components
+  <div class="relative mx-auto py-20 sm:py-28 lg:py-32">
+    <div class="mx-auto flex max-w-4xl flex-col items-center text-center">
+      <span class="mb-6 inline-flex items-center rounded-full bg-white/20 px-4 py-1 text-sm font-medium text-white backdrop-blur dark:bg-white/10">
+        🚀 Launch faster
       </span>
-    </h1>
 
-    <p class="mb-10 max-w-2xl text-base text-white/90 dark:text-white/80 sm:text-lg md:text-xl">
-      Copy and paste production-ready UI components built with Tailwind CSS.
-      Save hours of development time.
-    </p>
+      <h1 class="mb-6 text-balance text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+        Build Faster with
+        <span class="block bg-gradient-to-r from-white to-secondary-200 bg-clip-text text-transparent dark:to-secondary-300">
+          Beautiful Components
+        </span>
+      </h1>
 
-    <div class="flex flex-col gap-4 sm:flex-row">
-      <a href="/components"
-        class="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 font-semibold text-primary-700 shadow-lg transition hover:bg-gray-100 dark:bg-white dark:text-primary-800 dark:hover:bg-gray-200">
-        Browse Components
-      </a>
-      <a href="#features"
-        class="inline-flex items-center justify-center rounded-lg bg-white/15 dark:bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur transition hover:bg-white/25 dark:hover:bg-white/20">
-        Learn More
-      </a>
+      <p class="mb-10 max-w-2xl text-base text-white/90 sm:text-lg dark:text-white/80">
+        Copy and paste production-ready UI components built with Tailwind CSS.
+        Save hours of development time.
+      </p>
+
+      <div class="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
+        <a
+          href="/components"
+          class="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-sm font-semibold text-primary-700 shadow-lg transition hover:bg-gray-100 dark:text-primary-800"
+        >
+          Browse Components
+        </a>
+        <a
+          href="#features"
+          class="inline-flex items-center justify-center rounded-lg bg-white/20 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/30 dark:bg-white/10 dark:hover:bg-white/20"
+        >
+          Learn More
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -54,40 +61,43 @@ export const heroComponents: Component[] = [
 export default function GradientHero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary-600 via-secondary-500 to-primary-800 dark:from-primary-900 dark:via-secondary-800 dark:to-primary-950">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/30 dark:bg-white/10 blur-[140px]" />
+      {/* Glow */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/30 blur-[100px] sm:h-96 sm:w-96 dark:bg-white/10" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[90vh] max-w-7xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center">
-        <span className="mb-4 inline-flex items-center rounded-full bg-white/15 dark:bg-white/10 px-4 py-1 text-sm font-medium text-white backdrop-blur">
-          🚀 Launch faster
-        </span>
-
-        <h1 className="mb-6 max-w-5xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          Build Faster with
-          <span className="block bg-gradient-to-r from-white to-secondary-200 dark:from-white dark:to-secondary-300 bg-clip-text text-transparent">
-            Beautiful Components
+      <div className="relative mx-auto py-20 sm:py-28 lg:py-32">
+        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+          <span className="mb-6 inline-flex items-center rounded-full bg-white/20 px-4 py-1 text-sm font-medium text-white backdrop-blur dark:bg-white/10">
+            🚀 Launch faster
           </span>
-        </h1>
 
-        <p className="mb-10 max-w-2xl text-base text-white/90 dark:text-white/80 sm:text-lg md:text-xl">
-          Copy and paste production-ready UI components built with Tailwind CSS.
-          Save hours of development time.
-        </p>
+          <h1 className="mb-6 text-balance text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Build Faster with
+            <span className="block bg-gradient-to-r from-white to-secondary-200 bg-clip-text text-transparent dark:to-secondary-300">
+              Beautiful Components
+            </span>
+          </h1>
 
-        <div className="flex flex-col gap-4 sm:flex-row">
-          <a
-            href="/components"
-            className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 font-semibold text-primary-700 shadow-lg transition hover:bg-gray-100 dark:bg-white dark:text-primary-800 dark:hover:bg-gray-200"
-          >
-            Browse Components
-          </a>
-          <a
-            href="#features"
-            className="inline-flex items-center justify-center rounded-lg bg-white/15 dark:bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur transition hover:bg-white/25 dark:hover:bg-white/20"
-          >
-            Learn More
-          </a>
+          <p className="mb-10 max-w-2xl text-base text-white/90 sm:text-lg dark:text-white/80">
+            Copy and paste production-ready UI components built with Tailwind CSS.
+            Save hours of development time.
+          </p>
+
+          <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
+            <a
+              href="/components"
+              className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-sm font-semibold text-primary-700 shadow-lg transition hover:bg-gray-100 dark:text-primary-800"
+            >
+              Browse Components
+            </a>
+            <a
+              href="#features"
+              className="inline-flex items-center justify-center rounded-lg bg-white/20 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/30 dark:bg-white/10 dark:hover:bg-white/20"
+            >
+              Learn More
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -97,45 +107,58 @@ export default function GradientHero() {
 
     vueCode: `
 <template>
-  <section class="relative overflow-hidden bg-gradient-to-br from-primary-600 via-secondary-500 to-primary-800 dark:from-primary-900 dark:via-secondary-800 dark:to-primary-950">
-    <div class="absolute inset-0 -z-10">
-      <div class="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/30 dark:bg-white/10 blur-[140px]"></div>
+  <section
+    class="relative overflow-hidden bg-gradient-to-br from-primary-600 via-secondary-500 to-primary-800 dark:from-primary-900 dark:via-secondary-800 dark:to-primary-950"
+  >
+    <div class="pointer-events-none absolute inset-0">
+      <div
+        class="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/30 blur-[100px] sm:h-96 sm:w-96 dark:bg-white/10"
+      ></div>
     </div>
 
-    <div class="relative mx-auto flex min-h-[90vh] max-w-7xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center">
-      <span class="mb-4 inline-flex items-center rounded-full bg-white/15 dark:bg-white/10 px-4 py-1 text-sm font-medium text-white backdrop-blur">
-        🚀 Launch faster
-      </span>
-
-      <h1 class="mb-6 max-w-5xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-        Build Faster with
-        <span class="block bg-gradient-to-r from-white to-secondary-200 dark:from-white dark:to-secondary-300 bg-clip-text text-transparent">
-          Beautiful Components
+    <div class="relative mx-auto py-20 sm:py-28 lg:py-32">
+      <div class="mx-auto flex max-w-4xl flex-col items-center text-center">
+        <span
+          class="mb-6 inline-flex items-center rounded-full bg-white/20 px-4 py-1 text-sm font-medium text-white backdrop-blur dark:bg-white/10"
+        >
+          🚀 Launch faster
         </span>
-      </h1>
 
-      <p class="mb-10 max-w-2xl text-base text-white/90 dark:text-white/80 sm:text-lg md:text-xl">
-        Copy and paste production-ready UI components built with Tailwind CSS.
-        Save hours of development time.
-      </p>
+        <h1
+          class="mb-6 text-balance text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl"
+        >
+          Build Faster with
+          <span
+            class="block bg-gradient-to-r from-white to-secondary-200 bg-clip-text text-transparent dark:to-secondary-300"
+          >
+            Beautiful Components
+          </span>
+        </h1>
 
-      <div class="flex flex-col gap-4 sm:flex-row">
-        <a href="/components"
-          class="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 font-semibold text-primary-700 shadow-lg transition hover:bg-gray-100 dark:bg-white dark:text-primary-800 dark:hover:bg-gray-200">
-          Browse Components
-        </a>
-        <a href="#features"
-          class="inline-flex items-center justify-center rounded-lg bg-white/15 dark:bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur transition hover:bg-white/25 dark:hover:bg-white/20">
-          Learn More
-        </a>
+        <p class="mb-10 max-w-2xl text-base text-white/90 sm:text-lg dark:text-white/80">
+          Copy and paste production-ready UI components built with Tailwind CSS.
+          Save hours of development time.
+        </p>
+
+        <div class="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
+          <a
+            href="/components"
+            class="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-sm font-semibold text-primary-700 shadow-lg transition hover:bg-gray-100 dark:text-primary-800"
+          >
+            Browse Components
+          </a>
+          <a
+            href="#features"
+            class="inline-flex items-center justify-center rounded-lg bg-white/20 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/30 dark:bg-white/10 dark:hover:bg-white/20"
+          >
+            Learn More
+          </a>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
-<script setup>
-// purely presentational
-</script>
 `,
 
     dependencies: ['tailwindcss'],
