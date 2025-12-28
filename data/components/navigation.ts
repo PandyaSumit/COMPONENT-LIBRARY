@@ -11,7 +11,7 @@ export const navigationComponents: Component[] = [
     featured: true,
     popular: true,
     isNew: true,
-    htmlCode: `<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50">
+    htmlCode: `<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-800/50 dark:border-gray-800 dark:border-slate-700/50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
@@ -26,15 +26,15 @@ export const navigationComponents: Component[] = [
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center gap-1">
-        <a href="#" class="px-4 py-2 text-sm font-medium text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 rounded-lg transition-colors">Home</a>
-        <a href="#" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">Products</a>
-        <a href="#" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">Solutions</a>
-        <a href="#" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">Pricing</a>
+        <a href="#" class="px-4 py-2 text-sm font-medium text-gray-900 dark:text-white dark:text-white bg-gray-100 dark:bg-gray-800 rounded-lg transition-colors">Home</a>
+        <a href="#" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">Products</a>
+        <a href="#" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">Solutions</a>
+        <a href="#" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">Pricing</a>
       </div>
 
       <!-- Actions -->
       <div class="hidden md:flex items-center gap-3">
-        <button class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+        <button class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white transition-colors">
           Sign In
         </button>
         <button class="px-5 py-2 text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40">
@@ -43,7 +43,7 @@ export const navigationComponents: Component[] = [
       </div>
 
       <!-- Mobile menu button -->
-      <button class="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+      <button class="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -59,7 +59,7 @@ export default function GlassmorphicNavbar() {
   const [activeLink, setActiveLink] = useState('home');
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-800/50 dark:border-gray-800 dark:border-slate-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -79,20 +79,20 @@ export default function GlassmorphicNavbar() {
               onClick={() => setActiveLink('home')}
               className={\`px-4 py-2 text-sm font-medium rounded-lg transition-colors \${
                 activeLink === 'home'
-                  ? 'text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                  ? 'text-gray-900 dark:text-white dark:text-white bg-gray-100 dark:bg-gray-800'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
               }\`}
             >
               Home
             </a>
-            <a href="#" className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">Products</a>
-            <a href="#" className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">Solutions</a>
-            <a href="#" className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">Pricing</a>
+            <a href="#" className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">Products</a>
+            <a href="#" className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">Solutions</a>
+            <a href="#" className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">Pricing</a>
           </div>
 
           {/* Actions */}
           <div className="hidden md:flex items-center gap-3">
-            <button className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+            <button className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white transition-colors">
               Sign In
             </button>
             <button className="px-5 py-2 text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40">
@@ -101,7 +101,7 @@ export default function GlassmorphicNavbar() {
           </div>
 
           {/* Mobile menu button */}
-          <button className="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+          <button className="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
@@ -112,7 +112,7 @@ export default function GlassmorphicNavbar() {
   );
 }`,
     vueCode: `<template>
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50">
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-800/50 dark:border-gray-800 dark:border-slate-700/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
@@ -135,8 +135,8 @@ export default function GlassmorphicNavbar() {
             :class="[
               'px-4 py-2 text-sm font-medium rounded-lg transition-colors',
               activeLink === link.id
-                ? 'text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800'
-                : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                ? 'text-gray-900 dark:text-white dark:text-white bg-gray-100 dark:bg-gray-800'
+                : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
             ]"
           >
             {{ link.label }}
@@ -145,7 +145,7 @@ export default function GlassmorphicNavbar() {
 
         <!-- Actions -->
         <div class="hidden md:flex items-center gap-3">
-          <button class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+          <button class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white transition-colors">
             Sign In
           </button>
           <button class="px-5 py-2 text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40">
@@ -154,7 +154,7 @@ export default function GlassmorphicNavbar() {
         </div>
 
         <!-- Mobile menu button -->
-        <button class="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+        <button class="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-white dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -409,13 +409,13 @@ const links = [
     featured: true,
     popular: false,
     isNew: true,
-    htmlCode: `<nav class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+    htmlCode: `<nav class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-slate-800 dark:border-gray-800 dark:border-slate-700">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-20">
       <!-- Left Navigation -->
       <div class="hidden md:flex items-center gap-8">
-        <a href="#" class="text-sm font-medium text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Products</a>
-        <a href="#" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Solutions</a>
+        <a href="#" class="text-sm font-medium text-gray-900 dark:text-white dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Products</a>
+        <a href="#" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-white dark:hover:text-white transition-colors">Solutions</a>
       </div>
 
       <!-- Centered Logo -->
@@ -426,13 +426,13 @@ const links = [
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
             </svg>
           </div>
-          <span class="text-xl font-bold text-gray-900 dark:text-white">Luxury</span>
+          <span class="text-xl font-bold text-gray-900 dark:text-white dark:text-white">Luxury</span>
         </a>
       </div>
 
       <!-- Right Navigation -->
       <div class="hidden md:flex items-center gap-6">
-        <a href="#" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Pricing</a>
+        <a href="#" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-white dark:hover:text-white transition-colors">Pricing</a>
         <a href="#" class="px-6 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/30">
           Get Started
         </a>
@@ -449,12 +449,12 @@ const links = [
 </nav>`,
     reactCode: `export default function CenteredLogoNavbar() {
   return (
-    <nav className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+    <nav className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-slate-800 dark:border-gray-800 dark:border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-sm font-medium text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Products</a>
-            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Solutions</a>
+            <a href="#" className="text-sm font-medium text-gray-900 dark:text-white dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Products</a>
+            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-white dark:hover:text-white transition-colors">Solutions</a>
           </div>
 
           <div className="absolute left-1/2 transform -translate-x-1/2">
@@ -464,12 +464,12 @@ const links = [
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
                 </svg>
               </div>
-              <span className="text-xl font-bold text-gray-900 dark:text-white">Luxury</span>
+              <span className="text-xl font-bold text-gray-900 dark:text-white dark:text-white">Luxury</span>
             </a>
           </div>
 
           <div className="hidden md:flex items-center gap-6">
-            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Pricing</a>
+            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-white dark:hover:text-white transition-colors">Pricing</a>
             <a href="#" className="px-6 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/30">
               Get Started
             </a>
@@ -486,12 +486,12 @@ const links = [
   );
 }`,
     vueCode: `<template>
-  <nav class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+  <nav class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-slate-800 dark:border-gray-800 dark:border-slate-700">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <div class="hidden md:flex items-center gap-8">
-          <a href="#" class="text-sm font-medium text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Products</a>
-          <a href="#" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Solutions</a>
+          <a href="#" class="text-sm font-medium text-gray-900 dark:text-white dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Products</a>
+          <a href="#" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-white dark:hover:text-white transition-colors">Solutions</a>
         </div>
 
         <div class="absolute left-1/2 transform -translate-x-1/2">
@@ -501,12 +501,12 @@ const links = [
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
               </svg>
             </div>
-            <span class="text-xl font-bold text-gray-900 dark:text-white">Luxury</span>
+            <span class="text-xl font-bold text-gray-900 dark:text-white dark:text-white">Luxury</span>
           </a>
         </div>
 
         <div class="hidden md:flex items-center gap-6">
-          <a href="#" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Pricing</a>
+          <a href="#" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-white dark:hover:text-white transition-colors">Pricing</a>
           <a href="#" class="px-6 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/30">
             Get Started
           </a>
@@ -707,7 +707,7 @@ export default function MinimalNavbar() {
       <div class="hidden md:flex items-center gap-8">
         <a href="#" class="text-white/90 hover:text-white text-sm font-medium transition">Home</a>
         <a href="#" class="text-white/90 hover:text-white text-sm font-medium transition">About</a>
-        <a href="#" class="px-6 py-2 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition">Contact</a>
+        <a href="#" class="px-6 py-2 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 dark:text-white transition">Contact</a>
       </div>
     </div>
   </div>
@@ -766,7 +766,7 @@ export default function MinimalNavbar() {
     featured: false,
     popular: false,
     isNew: true,
-    htmlCode: `<nav class="bg-white border-b border-gray-200">
+    htmlCode: `<nav class="bg-white border-b border-gray-200 dark:border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="hidden md:flex items-center gap-6">
@@ -781,7 +781,7 @@ export default function MinimalNavbar() {
     </div>
   </div>
 </nav>`,
-    reactCode: `export default function SplitNavbar() { return (<nav className="bg-white border-b border-gray-200"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16"><div className="hidden md:flex items-center gap-6"><a href="#" className="text-sm font-medium">Products</a></div><a href="#" className="text-xl font-bold">LOGO</a><div className="hidden md:flex items-center gap-6"><a href="#" className="text-sm font-medium">About</a></div></div></div></nav>); }`,
+    reactCode: `export default function SplitNavbar() { return (<nav className="bg-white border-b border-gray-200 dark:border-slate-800"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16"><div className="hidden md:flex items-center gap-6"><a href="#" className="text-sm font-medium">Products</a></div><a href="#" className="text-xl font-bold">LOGO</a><div className="hidden md:flex items-center gap-6"><a href="#" className="text-sm font-medium">About</a></div></div></div></nav>); }`,
     vueCode: `<template><nav class="bg-white border-b"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-16"><a href="#" class="text-xl font-bold">LOGO</a></div></div></nav></template>`,
     dependencies: ['tailwindcss'],
     usage: 'Great for fashion, luxury, and portfolio sites',
@@ -808,14 +808,14 @@ export default function MinimalNavbar() {
       <a href="#" class="text-xl font-bold text-gray-900">Shop</a>
       <div class="hidden md:flex items-center gap-8">
         <div class="relative group">
-          <button class="text-sm font-medium text-gray-700 hover:text-gray-900 flex items-center gap-1">
+          <button class="text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-white flex items-center gap-1">
             Products
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
           <div class="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-2xl border border-gray-100 p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
             <div class="grid grid-cols-2 gap-4">
-              <div><h3 class="font-semibold text-gray-900 mb-2">Category 1</h3><a href="#" class="block py-1 text-sm text-gray-600 hover:text-indigo-600">Item 1</a></div>
-              <div><h3 class="font-semibold text-gray-900 mb-2">Category 2</h3><a href="#" class="block py-1 text-sm text-gray-600 hover:text-indigo-600">Item 2</a></div>
+              <div><h3 class="font-semibold text-gray-900 dark:text-white mb-2">Category 1</h3><a href="#" class="block py-1 text-sm text-gray-600 hover:text-indigo-600">Item 1</a></div>
+              <div><h3 class="font-semibold text-gray-900 dark:text-white mb-2">Category 2</h3><a href="#" class="block py-1 text-sm text-gray-600 hover:text-indigo-600">Item 2</a></div>
             </div>
           </div>
         </div>
@@ -845,20 +845,20 @@ export default function MinimalNavbar() {
     featured: false,
     popular: true,
     isNew: true,
-    htmlCode: `<nav class="bg-gray-900 border-b border-gray-800">
+    htmlCode: `<nav class="bg-gray-900 border-b border-gray-800 dark:border-slate-700">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="#" class="text-xl font-bold text-white">Brand</a>
       <div class="hidden md:flex items-center gap-6">
         <a href="#" class="text-sm text-gray-300 hover:text-white transition">Home</a>
         <a href="#" class="text-sm text-gray-300 hover:text-white transition">Features</a>
-        <a href="#" class="px-5 py-2 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition">Sign In</a>
+        <a href="#" class="px-5 py-2 bg-white text-gray-900 dark:text-white font-semibold rounded-lg hover:bg-gray-100 transition">Sign In</a>
       </div>
     </div>
   </div>
 </nav>`,
-    reactCode: `export default function DarkNavbar() { return (<nav className="bg-gray-900 border-b border-gray-800"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16"><a href="#" className="text-xl font-bold text-white">Brand</a></div></div></nav>); }`,
-    vueCode: `<template><nav class="bg-gray-900 border-b border-gray-800"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-16"><a href="#" class="text-xl font-bold text-white">Brand</a></div></div></nav></template>`,
+    reactCode: `export default function DarkNavbar() { return (<nav className="bg-gray-900 border-b border-gray-800 dark:border-slate-700"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16"><a href="#" className="text-xl font-bold text-white">Brand</a></div></div></nav>); }`,
+    vueCode: `<template><nav class="bg-gray-900 border-b border-gray-800 dark:border-slate-700"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-16"><a href="#" class="text-xl font-bold text-white">Brand</a></div></div></nav></template>`,
     dependencies: ['tailwindcss'],
     usage: 'Perfect for tech products, developer tools, and modern apps',
     customizationTips: 'Add subtle gradients, adjust contrast for accessibility',
@@ -878,10 +878,10 @@ export default function MinimalNavbar() {
     featured: true,
     popular: true,
     isNew: true,
-    htmlCode: `<nav class="bg-white border-b border-gray-200">
+    htmlCode: `<nav class="bg-white border-b border-gray-200 dark:border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 gap-4">
-      <a href="#" class="text-xl font-bold text-gray-900 whitespace-nowrap">Brand</a>
+      <a href="#" class="text-xl font-bold text-gray-900 dark:text-white whitespace-nowrap">Brand</a>
       <div class="flex-1 max-w-2xl">
         <div class="relative">
           <input type="text" placeholder="Search products..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
@@ -895,7 +895,7 @@ export default function MinimalNavbar() {
     </div>
   </div>
 </nav>`,
-    reactCode: `export default function SearchNavbar() { return (<nav className="bg-white border-b border-gray-200"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16 gap-4"><a href="#" className="text-xl font-bold">Brand</a><div className="flex-1 max-w-2xl"><input type="text" placeholder="Search..." className="w-full pl-10 pr-4 py-2 border rounded-lg" /></div></div></div></nav>); }`,
+    reactCode: `export default function SearchNavbar() { return (<nav className="bg-white border-b border-gray-200 dark:border-slate-800"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16 gap-4"><a href="#" className="text-xl font-bold">Brand</a><div className="flex-1 max-w-2xl"><input type="text" placeholder="Search..." className="w-full pl-10 pr-4 py-2 border rounded-lg" /></div></div></div></nav>); }`,
     vueCode: `<template><nav class="bg-white border-b"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-16 gap-4"><a href="#" class="text-xl font-bold">Brand</a><input type="text" placeholder="Search..." class="flex-1 max-w-2xl pl-10 pr-4 py-2 border rounded-lg" /></div></div></nav></template>`,
     dependencies: ['tailwindcss'],
     usage: 'Ideal for ecommerce, documentation sites, and content-heavy platforms',
@@ -916,12 +916,12 @@ export default function MinimalNavbar() {
     featured: false,
     popular: true,
     isNew: true,
-    htmlCode: `<nav class="bg-white border-b border-gray-200">
+    htmlCode: `<nav class="bg-white border-b border-gray-200 dark:border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="#" class="text-xl font-bold text-gray-900">Dashboard</a>
       <div class="flex items-center gap-4">
-        <button class="relative p-2 text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-100">
+        <button class="relative p-2 text-gray-600 hover:text-gray-900 dark:text-white rounded-lg hover:bg-gray-100">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
           <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
         </button>
@@ -930,7 +930,7 @@ export default function MinimalNavbar() {
     </div>
   </div>
 </nav>`,
-    reactCode: `export default function NotificationNavbar() { return (<nav className="bg-white border-b border-gray-200"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16"><a href="#" className="text-xl font-bold">Dashboard</a><div className="flex items-center gap-4"><button className="relative p-2 rounded-lg hover:bg-gray-100"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg><span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span></button></div></div></div></nav>); }`,
+    reactCode: `export default function NotificationNavbar() { return (<nav className="bg-white border-b border-gray-200 dark:border-slate-800"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16"><a href="#" className="text-xl font-bold">Dashboard</a><div className="flex items-center gap-4"><button className="relative p-2 rounded-lg hover:bg-gray-100"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg><span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span></button></div></div></div></nav>); }`,
     vueCode: `<template><nav class="bg-white border-b"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-16"><a href="#" class="text-xl font-bold">Dashboard</a></div></div></nav></template>`,
     dependencies: ['tailwindcss'],
     usage: 'Essential for web applications and dashboards',
@@ -951,7 +951,7 @@ export default function MinimalNavbar() {
     featured: true,
     popular: false,
     isNew: true,
-    htmlCode: `<nav class="bg-white border-b border-gray-200">
+    htmlCode: `<nav class="bg-white border-b border-gray-200 dark:border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="#" class="text-xl font-bold text-gray-900">Brand</a>
@@ -972,7 +972,7 @@ export default function MinimalNavbar() {
     </div>
   </div>
 </nav>`,
-    reactCode: `export default function AnimatedNavbar() { return (<nav className="bg-white border-b border-gray-200"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16"><a href="#" className="text-xl font-bold">Brand</a><div className="hidden md:flex items-center gap-8"><a href="#" className="relative group text-sm font-medium">Home<span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span></a></div></div></div></nav>); }`,
+    reactCode: `export default function AnimatedNavbar() { return (<nav className="bg-white border-b border-gray-200 dark:border-slate-800"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16"><a href="#" className="text-xl font-bold">Brand</a><div className="hidden md:flex items-center gap-8"><a href="#" className="relative group text-sm font-medium">Home<span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span></a></div></div></div></nav>); }`,
     vueCode: `<template><nav class="bg-white border-b"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-16"><a href="#" class="text-xl font-bold">Brand</a></div></div></nav></template>`,
     dependencies: ['tailwindcss'],
     usage: 'Great for modern websites wanting subtle interactions',
@@ -994,7 +994,7 @@ export default function MinimalNavbar() {
     popular: false,
     isNew: true,
     htmlCode: `<div class="p-4">
-  <nav class="bg-white border border-gray-200 rounded-xl shadow-sm">
+  <nav class="bg-white border border-gray-200 dark:border-slate-800 rounded-xl shadow-sm">
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex items-center justify-between h-16">
         <a href="#" class="text-xl font-bold text-gray-900">Brand</a>
@@ -1007,7 +1007,7 @@ export default function MinimalNavbar() {
     </div>
   </nav>
 </div>`,
-    reactCode: `export default function BorderedNavbar() { return (<div className="p-4"><nav className="bg-white border border-gray-200 rounded-xl shadow-sm"><div className="max-w-7xl mx-auto px-6"><div className="flex items-center justify-between h-16"><a href="#" className="text-xl font-bold">Brand</a></div></div></nav></div>); }`,
+    reactCode: `export default function BorderedNavbar() { return (<div className="p-4"><nav className="bg-white border border-gray-200 dark:border-slate-800 rounded-xl shadow-sm"><div className="max-w-7xl mx-auto px-6"><div className="flex items-center justify-between h-16"><a href="#" className="text-xl font-bold">Brand</a></div></div></nav></div>); }`,
     vueCode: `<template><div class="p-4"><nav class="bg-white border rounded-xl shadow-sm"><div class="max-w-7xl mx-auto px-6"><div class="flex items-center justify-between h-16"><a href="#" class="text-xl font-bold">Brand</a></div></div></nav></div></template>`,
     dependencies: ['tailwindcss'],
     usage: 'Modern alternative to full-width navbars',
@@ -1028,7 +1028,7 @@ export default function MinimalNavbar() {
     featured: false,
     popular: true,
     isNew: true,
-    htmlCode: `<nav class="bg-white border-b border-gray-200">
+    htmlCode: `<nav class="bg-white border-b border-gray-200 dark:border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="#" class="text-xl font-bold text-gray-900">App</a>
@@ -1045,7 +1045,7 @@ export default function MinimalNavbar() {
     </div>
   </div>
 </nav>`,
-    reactCode: `export default function IconNavbar() { return (<nav className="bg-white border-b border-gray-200"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16"><a href="#" className="text-xl font-bold">App</a><div className="hidden md:flex items-center gap-2"><a href="#" className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg">Home</a></div></div></div></nav>); }`,
+    reactCode: `export default function IconNavbar() { return (<nav className="bg-white border-b border-gray-200 dark:border-slate-800"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16"><a href="#" className="text-xl font-bold">App</a><div className="hidden md:flex items-center gap-2"><a href="#" className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg">Home</a></div></div></div></nav>); }`,
     vueCode: `<template><nav class="bg-white border-b"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-16"><a href="#" class="text-xl font-bold">App</a></div></div></nav></template>`,
     dependencies: ['tailwindcss'],
     usage: 'Perfect for dashboards and web applications',
@@ -1066,7 +1066,7 @@ export default function MinimalNavbar() {
     featured: false,
     popular: false,
     isNew: true,
-    htmlCode: `<nav class="bg-white border-b border-gray-200">
+    htmlCode: `<nav class="bg-white border-b border-gray-200 dark:border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 border-b border-gray-100">
       <a href="#" class="text-xl font-bold text-gray-900">Brand</a>
@@ -1083,7 +1083,7 @@ export default function MinimalNavbar() {
     </div>
   </div>
 </nav>`,
-    reactCode: `export default function TwoRowNavbar() { return (<nav className="bg-white border-b border-gray-200"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16 border-b border-gray-100"><a href="#" className="text-xl font-bold">Brand</a></div><div className="flex items-center justify-center h-12 gap-8"><a href="#" className="text-sm font-medium">Products</a></div></div></nav>); }`,
+    reactCode: `export default function TwoRowNavbar() { return (<nav className="bg-white border-b border-gray-200 dark:border-slate-800"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16 border-b border-gray-100"><a href="#" className="text-xl font-bold">Brand</a></div><div className="flex items-center justify-center h-12 gap-8"><a href="#" className="text-sm font-medium">Products</a></div></div></nav>); }`,
     vueCode: `<template><nav class="bg-white border-b"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-16 border-b"><a href="#" class="text-xl font-bold">Brand</a></div><div class="flex items-center justify-center h-12 gap-8"><a href="#" class="text-sm font-medium">Products</a></div></div></nav></template>`,
     dependencies: ['tailwindcss'],
     usage: 'Great for sites with many navigation items and utilities',
@@ -1104,7 +1104,7 @@ export default function MinimalNavbar() {
     featured: false,
     popular: true,
     isNew: true,
-    htmlCode: `<nav class="bg-white border-b border-gray-200">
+    htmlCode: `<nav class="bg-white border-b border-gray-200 dark:border-slate-800">
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex items-center justify-between h-12">
       <a href="#" class="text-lg font-bold text-gray-900">Brand</a>
@@ -1118,7 +1118,7 @@ export default function MinimalNavbar() {
     </div>
   </div>
 </nav>`,
-    reactCode: `export default function CompactNavbar() { return (<nav className="bg-white border-b border-gray-200"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-12"><a href="#" className="text-lg font-bold">Brand</a></div></div></nav>); }`,
+    reactCode: `export default function CompactNavbar() { return (<nav className="bg-white border-b border-gray-200 dark:border-slate-800"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-12"><a href="#" className="text-lg font-bold">Brand</a></div></div></nav>); }`,
     vueCode: `<template><nav class="bg-white border-b"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-12"><a href="#" class="text-lg font-bold">Brand</a></div></div></nav></template>`,
     dependencies: ['tailwindcss'],
     usage: 'Perfect for mobile apps and space-constrained layouts',
@@ -1139,7 +1139,7 @@ export default function MinimalNavbar() {
     featured: true,
     popular: true,
     isNew: true,
-    htmlCode: `<nav class="bg-white border-b border-gray-200">
+    htmlCode: `<nav class="bg-white border-b border-gray-200 dark:border-slate-800">
   <div class="flex items-center justify-between h-16 px-4">
     <div class="flex items-center gap-4">
       <button class="p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
@@ -1155,7 +1155,7 @@ export default function MinimalNavbar() {
     </div>
   </div>
 </nav>`,
-    reactCode: `export default function SidebarToggleNavbar() { return (<nav className="bg-white border-b border-gray-200"><div className="flex items-center justify-between h-16 px-4"><div className="flex items-center gap-4"><button className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button><a href="#" className="text-xl font-bold">Dashboard</a></div></div></nav>); }`,
+    reactCode: `export default function SidebarToggleNavbar() { return (<nav className="bg-white border-b border-gray-200 dark:border-slate-800"><div className="flex items-center justify-between h-16 px-4"><div className="flex items-center gap-4"><button className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button><a href="#" className="text-xl font-bold">Dashboard</a></div></div></nav>); }`,
     vueCode: `<template><nav class="bg-white border-b"><div class="flex items-center justify-between h-16 px-4"><div class="flex items-center gap-4"><button class="p-2 hover:bg-gray-100 rounded-lg">Toggle</button><a href="#" class="text-xl font-bold">Dashboard</a></div></div></nav></template>`,
     dependencies: ['tailwindcss'],
     usage: 'Essential for dashboard and admin panel layouts',
@@ -1176,7 +1176,7 @@ export default function MinimalNavbar() {
     featured: false,
     popular: false,
     isNew: true,
-    htmlCode: `<nav class="bg-white border-b border-gray-200">
+    htmlCode: `<nav class="bg-white border-b border-gray-200 dark:border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="#" class="text-xl font-bold text-gray-900">Brand</a>
@@ -1198,7 +1198,7 @@ export default function MinimalNavbar() {
     </div>
   </div>
 </nav>`,
-    reactCode: `export default function LanguageNavbar() { return (<nav className="bg-white border-b border-gray-200"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16"><a href="#" className="text-xl font-bold">Brand</a><div className="hidden md:flex items-center gap-6"><button className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-100 rounded-lg">EN</button></div></div></div></nav>); }`,
+    reactCode: `export default function LanguageNavbar() { return (<nav className="bg-white border-b border-gray-200 dark:border-slate-800"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16"><a href="#" className="text-xl font-bold">Brand</a><div className="hidden md:flex items-center gap-6"><button className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-100 rounded-lg">EN</button></div></div></div></nav>); }`,
     vueCode: `<template><nav class="bg-white border-b"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-16"><a href="#" class="text-xl font-bold">Brand</a></div></div></nav></template>`,
     dependencies: ['tailwindcss'],
     usage: 'Essential for international websites and global brands',
