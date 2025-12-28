@@ -14,43 +14,73 @@ export const heroComponents: Component[] = [
     thumbnail: '/images/hero-gradient-1.png',
 
     htmlCode: `
-<section class="relative overflow-hidden bg-gradient-to-br from-primary-600 via-secondary-500 to-primary-800 dark:from-primary-900 dark:via-secondary-800 dark:to-primary-950">
-  <!-- Glow -->
-  <div class="pointer-events-none absolute inset-0">
-    <div class="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/30 blur-[100px] sm:h-96 sm:w-96 dark:bg-white/10"></div>
+<section class="relative overflow-hidden min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-black dark:via-purple-950 dark:to-black">
+  <!-- Premium multi-layer background -->
+  <div class="absolute inset-0">
+    <!-- Animated gradient orbs -->
+    <div class="absolute top-0 -left-1/4 w-full h-full bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 blur-3xl opacity-50"></div>
+    <div class="absolute bottom-0 -right-1/4 w-full h-full bg-gradient-to-l from-violet-600/20 via-fuchsia-600/20 to-purple-600/20 blur-3xl opacity-50"></div>
+    <!-- Grid pattern -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
   </div>
 
-  <div class="relative mx-auto py-20 sm:py-28 lg:py-32">
-    <div class="mx-auto flex max-w-4xl flex-col items-center text-center">
-      <span class="mb-6 inline-flex items-center rounded-full bg-white/20 px-4 py-1 text-sm font-medium text-white backdrop-blur dark:bg-white/10">
-        🚀 Launch faster
-      </span>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32">
+    <div class="flex flex-col items-center text-center min-h-[80vh] justify-center">
+      <!-- Premium badge -->
+      <div class="mb-6 sm:mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 px-4 sm:px-6 py-2 backdrop-blur-xl border border-white/10 shadow-2xl shadow-purple-500/10">
+        <span class="flex h-2 w-2 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+        </span>
+        <span class="text-xs sm:text-sm font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">v2.0 Just Launched</span>
+      </div>
 
-      <h1 class="mb-6 text-balance text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-        Build Faster with
-        <span class="block bg-gradient-to-r from-white to-secondary-200 bg-clip-text text-transparent dark:to-secondary-300">
-          Beautiful Components
+      <!-- Premium headline -->
+      <h1 class="mb-6 sm:mb-8 max-w-5xl px-4">
+        <span class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-none">
+          <span class="text-white">Build The</span>
+          <span class="block mt-2 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Future Faster</span>
         </span>
       </h1>
 
-      <p class="mb-10 max-w-2xl text-base text-white/90 sm:text-lg dark:text-white/80">
-        Copy and paste production-ready UI components built with Tailwind CSS.
-        Save hours of development time.
+      <!-- Enhanced subheadline -->
+      <p class="mb-8 sm:mb-12 max-w-3xl mx-auto px-4 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 dark:text-gray-400 leading-relaxed">
+        Premium UI components that save you <span class="text-white font-semibold">weeks of development time</span>. Production-ready, fully responsive, and built with modern standards.
       </p>
 
-      <div class="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
-        <a
-          href="/components"
-          class="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-sm font-semibold text-primary-700 shadow-lg transition hover:bg-gray-100 dark:text-primary-800"
-        >
-          Browse Components
+      <!-- Premium CTA buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-12 sm:mb-16 w-full sm:w-auto px-4">
+        <a href="/components" class="group relative inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-bold rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white shadow-2xl shadow-purple-500/50 transition-all duration-300 hover:shadow-purple-500/70 hover:scale-105 active:scale-95 overflow-hidden">
+          <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+          <span class="relative flex items-center gap-2">
+            Get Started Free
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </span>
         </a>
-        <a
-          href="#features"
-          class="inline-flex items-center justify-center rounded-lg bg-white/20 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/30 dark:bg-white/10 dark:hover:bg-white/20"
-        >
-          Learn More
+        <a href="#demo" class="group inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-bold rounded-2xl bg-white/5 dark:bg-white/10 text-white backdrop-blur-xl border border-white/20 shadow-xl hover:bg-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 active:scale-95">
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            Watch Demo
+          </span>
         </a>
+      </div>
+
+      <!-- Trust indicators -->
+      <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-12 text-sm">
+        <div class="flex items-center gap-2 text-gray-400">
+          <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span class="text-gray-300">No credit card</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400">
+          <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span class="text-gray-300">500+ components</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400">
+          <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span class="text-gray-300">Free updates</span>
+        </div>
       </div>
     </div>
   </div>
