@@ -533,26 +533,120 @@ const links = [
   {
     id: 'minimal-navbar-4',
     name: 'Minimal Clean Navbar',
-    description: 'Ultra-minimal navbar with clean typography and subtle hover effects',
+    description: 'Ultra-minimal navbar with clean typography, functional mobile menu, and subtle hover effects',
     category: 'navigation',
-    tags: ['minimal', 'clean', 'simple', 'modern', 'typography'],
+    tags: ['minimal', 'clean', 'simple', 'modern', 'typography', 'responsive'],
     thumbnail: '/images/nav-minimal-4.png',
     featured: false,
     popular: true,
     isNew: true,
-    htmlCode: `<nav class="bg-white border-b border-gray-100">
+    htmlCode: `<nav class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
-      <a href="#" class="text-2xl font-light tracking-tight text-gray-900">Brand</a>
+      <!-- Logo -->
+      <a href="#" class="text-xl sm:text-2xl font-light tracking-tight text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+        Brand
+      </a>
+
+      <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center gap-8">
-        <a href="#" class="text-sm text-gray-900 hover:text-gray-600 transition">Work</a>
-        <a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition">About</a>
-        <a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition">Contact</a>
+        <a href="#" class="text-sm font-medium text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors">
+          Work
+        </a>
+        <a href="#" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+          About
+        </a>
+        <a href="#" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+          Contact
+        </a>
       </div>
+
+      <!-- Mobile menu button -->
+      <button type="button" class="md:hidden p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu (hidden by default, use JS to toggle) -->
+  <div class="hidden md:hidden border-t border-gray-100 dark:border-slate-800">
+    <div class="px-4 py-4 space-y-3">
+      <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-900 dark:text-white bg-gray-50 dark:bg-slate-900 rounded-lg transition-colors">
+        Work
+      </a>
+      <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-900 rounded-lg transition-colors">
+        About
+      </a>
+      <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-900 rounded-lg transition-colors">
+        Contact
+      </a>
     </div>
   </div>
 </nav>`,
-    reactCode: `export default function MinimalNavbar() { return (<nav className="bg-white border-b border-gray-100"><div className="max-w-7xl mx-auto px-4"><div className="flex items-center justify-between h-16"><a href="#" className="text-2xl font-light">Brand</a><div className="hidden md:flex items-center gap-8"><a href="#" className="text-sm text-gray-900 hover:text-gray-600">Work</a></div></div></div></nav>); }`,
+    reactCode: `'use client';
+
+import { useState } from 'react';
+
+export default function MinimalNavbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  return (
+    <nav className="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <a href="#" className="text-xl sm:text-2xl font-light tracking-tight text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+            Brand
+          </a>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#" className="text-sm font-medium text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors">
+              Work
+            </a>
+            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+              About
+            </a>
+            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+              Contact
+            </a>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+            aria-label="Toggle menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden border-t border-gray-100 dark:border-slate-800">
+          <div className="px-4 py-4 space-y-3">
+            <a href="#" className="block px-4 py-2 text-sm font-medium text-gray-900 dark:text-white bg-gray-50 dark:bg-slate-900 rounded-lg transition-colors">
+              Work
+            </a>
+            <a href="#" className="block px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-900 rounded-lg transition-colors">
+              About
+            </a>
+            <a href="#" className="block px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-900 rounded-lg transition-colors">
+              Contact
+            </a>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+}`,
     vueCode: `<template><nav class="bg-white border-b border-gray-100"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-16"><a href="#" class="text-2xl font-light">Brand</a></div></div></nav></template>`,
     dependencies: ['tailwindcss'],
     usage: 'Perfect for portfolios, agencies, and minimalist brands',
