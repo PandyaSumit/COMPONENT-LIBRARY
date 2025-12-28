@@ -163,15 +163,15 @@ export default function GradientHero() {
 
   <!-- Multi-layer neon glow effects -->
   <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
-    <div class="absolute -top-40 -left-40 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl"></div>
-    <div class="absolute top-20 left-20 w-72 h-72 bg-cyan-400/30 rounded-full blur-[100px]"></div>
-    <div class="absolute -bottom-40 -right-40 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-20 right-20 w-72 h-72 bg-emerald-400/30 rounded-full blur-[100px]"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute -top-20 sm:-top-32 md:-top-40 -left-20 sm:-left-32 md:-left-40 w-64 sm:w-72 md:w-80 h-64 sm:h-72 md:h-80 bg-cyan-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-10 sm:top-16 md:top-20 left-10 sm:left-16 md:left-20 w-56 sm:w-64 md:w-72 h-56 sm:h-64 md:h-72 bg-cyan-400/30 rounded-full blur-[100px]"></div>
+    <div class="absolute -bottom-20 sm:-bottom-32 md:-bottom-40 -right-20 sm:-right-32 md:-right-40 w-64 sm:w-72 md:w-80 h-64 sm:h-72 md:h-80 bg-emerald-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 sm:bottom-16 md:bottom-20 right-10 sm:right-16 md:right-20 w-56 sm:w-64 md:w-72 h-56 sm:h-64 md:h-72 bg-emerald-400/30 rounded-full blur-[100px]"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
   </div>
 
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen">
+    <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen">
       <!-- Left content -->
       <div class="space-y-8">
         <!-- Badge -->
@@ -320,15 +320,15 @@ export default function GradientHero() {
 
       {/* Multi-layer neon glow effects */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div className="absolute -top-40 -left-40 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-400/30 rounded-full blur-[100px]"></div>
-        <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-72 h-72 bg-emerald-400/30 rounded-full blur-[100px]"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute -top-20 sm:-top-32 md:-top-40 -left-20 sm:-left-32 md:-left-40 w-64 sm:w-72 md:w-80 h-64 sm:h-72 md:h-80 bg-cyan-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-10 sm:top-16 md:top-20 left-10 sm:left-16 md:left-20 w-56 sm:w-64 md:w-72 h-56 sm:h-64 md:h-72 bg-cyan-400/30 rounded-full blur-[100px]"></div>
+        <div className="absolute -bottom-20 sm:-bottom-32 md:-bottom-40 -right-20 sm:-right-32 md:-right-40 w-64 sm:w-72 md:w-80 h-64 sm:h-72 md:h-80 bg-emerald-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 sm:bottom-16 md:bottom-20 right-10 sm:right-16 md:right-20 w-56 sm:w-64 md:w-72 h-56 sm:h-64 md:h-72 bg-emerald-400/30 rounded-full blur-[100px]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen">
           {/* Left content */}
           <div className="space-y-8">
             {/* Badge */}
@@ -640,50 +640,50 @@ export default function GradientHero() {
     featured: true,
     popular: true,
     isNew: true,
-    htmlCode: `<section class="relative min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100 overflow-hidden">
+    htmlCode: `<section class="relative min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100 dark:from-purple-950 dark:via-slate-900 dark:to-blue-950 overflow-hidden">
   <!-- Floating gradient orbs -->
-  <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-  <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-  <div class="absolute bottom-1/4 left-1/3 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-  
+  <div class="absolute top-1/4 left-1/4 w-48 sm:w-64 md:w-72 h-48 sm:h-64 md:h-72 bg-purple-400 dark:bg-purple-600 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-70 dark:opacity-30"></div>
+  <div class="absolute top-1/3 right-1/4 w-48 sm:w-64 md:w-72 h-48 sm:h-64 md:h-72 bg-pink-400 dark:bg-pink-600 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-70 dark:opacity-30"></div>
+  <div class="absolute bottom-1/4 left-1/3 w-48 sm:w-64 md:w-72 h-48 sm:h-64 md:h-72 bg-blue-400 dark:bg-blue-600 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-70 dark:opacity-30"></div>
+
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex items-center min-h-screen">
     <div class="w-full">
       <!-- Glass card -->
-      <div class="max-w-4xl mx-auto backdrop-blur-xl bg-white/30 rounded-3xl p-12 border border-white/50 shadow-2xl">
+      <div class="max-w-4xl mx-auto backdrop-blur-xl bg-white/30 dark:bg-slate-800/30 rounded-3xl p-8 sm:p-10 md:p-12 border border-white/50 dark:border-white/10 shadow-2xl">
         <div class="text-center">
-          <div class="inline-block px-6 py-2 bg-white/40 backdrop-blur-sm rounded-full mb-6 border border-white/60">
-            <span class="text-purple-900 font-semibold">🎨 Premium Design System</span>
+          <div class="inline-block px-6 py-2 bg-white/40 dark:bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/60 dark:border-white/20">
+            <span class="text-purple-900 dark:text-purple-300 font-semibold">🎨 Premium Design System</span>
           </div>
-          <h1 class="text-6xl md:text-7xl font-bold text-gray-900 mb-6">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
             Beautiful by
-            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400">
               Default
             </span>
           </h1>
-          <p class="text-xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
             Experience the perfect blend of aesthetics and functionality with our glassmorphic design components.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all">
+            <a href="#" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-500 dark:to-pink-500 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all">
               Explore Components
             </a>
-            <a href="#" class="px-8 py-4 bg-white/50 backdrop-blur-sm text-gray-900 rounded-xl font-semibold hover:bg-white/70 transition-colors border border-white/60">
+            <a href="#" class="px-8 py-4 bg-white/50 dark:bg-white/10 backdrop-blur-sm text-gray-900 dark:text-white rounded-xl font-semibold hover:bg-white/70 dark:hover:bg-white/20 transition-colors border border-white/60 dark:border-white/20">
               Documentation
             </a>
           </div>
         </div>
       </div>
-      
+
       <!-- Feature pills -->
       <div class="flex flex-wrap gap-4 justify-center mt-12">
-        <div class="px-6 py-3 bg-white/40 backdrop-blur-sm rounded-full border border-white/60">
-          <span class="text-gray-800 font-medium">⚡ Lightning Fast</span>
+        <div class="px-6 py-3 bg-white/40 dark:bg-white/10 backdrop-blur-sm rounded-full border border-white/60 dark:border-white/20">
+          <span class="text-gray-800 dark:text-gray-200 font-medium">⚡ Lightning Fast</span>
         </div>
-        <div class="px-6 py-3 bg-white/40 backdrop-blur-sm rounded-full border border-white/60">
-          <span class="text-gray-800 font-medium">🎯 Pixel Perfect</span>
+        <div class="px-6 py-3 bg-white/40 dark:bg-white/10 backdrop-blur-sm rounded-full border border-white/60 dark:border-white/20">
+          <span class="text-gray-800 dark:text-gray-200 font-medium">🎯 Pixel Perfect</span>
         </div>
-        <div class="px-6 py-3 bg-white/40 backdrop-blur-sm rounded-full border border-white/60">
-          <span class="text-gray-800 font-medium">📱 Fully Responsive</span>
+        <div class="px-6 py-3 bg-white/40 dark:bg-white/10 backdrop-blur-sm rounded-full border border-white/60 dark:border-white/20">
+          <span class="text-gray-800 dark:text-gray-200 font-medium">📱 Fully Responsive</span>
         </div>
       </div>
     </div>
@@ -691,50 +691,50 @@ export default function GradientHero() {
 </section>`,
     reactCode: `export default function GlassmorphicHero() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100 dark:from-purple-950 dark:via-slate-900 dark:to-blue-950 overflow-hidden">
       {/* Floating gradient orbs */}
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-      <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-      <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-      
+      <div className="absolute top-1/4 left-1/4 w-48 sm:w-64 md:w-72 h-48 sm:h-64 md:h-72 bg-purple-400 dark:bg-purple-600 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-70 dark:opacity-30"></div>
+      <div className="absolute top-1/3 right-1/4 w-48 sm:w-64 md:w-72 h-48 sm:h-64 md:h-72 bg-pink-400 dark:bg-pink-600 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-70 dark:opacity-30"></div>
+      <div className="absolute bottom-1/4 left-1/3 w-48 sm:w-64 md:w-72 h-48 sm:h-64 md:h-72 bg-blue-400 dark:bg-blue-600 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-70 dark:opacity-30"></div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex items-center min-h-screen">
         <div className="w-full">
           {/* Glass card */}
-          <div className="max-w-4xl mx-auto backdrop-blur-xl bg-white/30 rounded-3xl p-12 border border-white/50 shadow-2xl">
+          <div className="max-w-4xl mx-auto backdrop-blur-xl bg-white/30 dark:bg-slate-800/30 rounded-3xl p-8 sm:p-10 md:p-12 border border-white/50 dark:border-white/10 shadow-2xl">
             <div className="text-center">
-              <div className="inline-block px-6 py-2 bg-white/40 backdrop-blur-sm rounded-full mb-6 border border-white/60">
-                <span className="text-purple-900 font-semibold">🎨 Premium Design System</span>
+              <div className="inline-block px-6 py-2 bg-white/40 dark:bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/60 dark:border-white/20">
+                <span className="text-purple-900 dark:text-purple-300 font-semibold">🎨 Premium Design System</span>
               </div>
-              <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
                 Beautiful by
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400">
                   Default
                 </span>
               </h1>
-              <p className="text-xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Experience the perfect blend of aesthetics and functionality with our glassmorphic design components.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all">
+                <a href="#" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-500 dark:to-pink-500 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all">
                   Explore Components
                 </a>
-                <a href="#" className="px-8 py-4 bg-white/50 backdrop-blur-sm text-gray-900 rounded-xl font-semibold hover:bg-white/70 transition-colors border border-white/60">
+                <a href="#" className="px-8 py-4 bg-white/50 dark:bg-white/10 backdrop-blur-sm text-gray-900 dark:text-white rounded-xl font-semibold hover:bg-white/70 dark:hover:bg-white/20 transition-colors border border-white/60 dark:border-white/20">
                   Documentation
                 </a>
               </div>
             </div>
           </div>
-          
+
           {/* Feature pills */}
           <div className="flex flex-wrap gap-4 justify-center mt-12">
-            <div className="px-6 py-3 bg-white/40 backdrop-blur-sm rounded-full border border-white/60">
-              <span className="text-gray-800 font-medium">⚡ Lightning Fast</span>
+            <div className="px-6 py-3 bg-white/40 dark:bg-white/10 backdrop-blur-sm rounded-full border border-white/60 dark:border-white/20">
+              <span className="text-gray-800 dark:text-gray-200 font-medium">⚡ Lightning Fast</span>
             </div>
-            <div className="px-6 py-3 bg-white/40 backdrop-blur-sm rounded-full border border-white/60">
-              <span className="text-gray-800 font-medium">🎯 Pixel Perfect</span>
+            <div className="px-6 py-3 bg-white/40 dark:bg-white/10 backdrop-blur-sm rounded-full border border-white/60 dark:border-white/20">
+              <span className="text-gray-800 dark:text-gray-200 font-medium">🎯 Pixel Perfect</span>
             </div>
-            <div className="px-6 py-3 bg-white/40 backdrop-blur-sm rounded-full border border-white/60">
-              <span className="text-gray-800 font-medium">📱 Fully Responsive</span>
+            <div className="px-6 py-3 bg-white/40 dark:bg-white/10 backdrop-blur-sm rounded-full border border-white/60 dark:border-white/20">
+              <span className="text-gray-800 dark:text-gray-200 font-medium">📱 Fully Responsive</span>
             </div>
           </div>
         </div>
@@ -815,45 +815,45 @@ export default function GradientHero() {
     featured: false,
     popular: true,
     isNew: true,
-    htmlCode: `<section class="relative min-h-screen bg-white overflow-hidden">
+    htmlCode: `<section class="relative min-h-screen bg-white dark:bg-slate-950 overflow-hidden">
   <!-- Subtle grid background -->
-  <div class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-  
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+
   <!-- Gradient blob accents -->
-  <div class="absolute top-40 right-20 w-96 h-96 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full blur-3xl opacity-20"></div>
-  <div class="absolute bottom-40 left-20 w-96 h-96 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full blur-3xl opacity-20"></div>
-  
+  <div class="absolute top-20 sm:top-32 md:top-40 right-10 sm:right-16 md:right-20 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-gradient-to-br from-orange-400 to-pink-500 dark:from-orange-600 dark:to-pink-600 rounded-full blur-3xl opacity-20 dark:opacity-10"></div>
+  <div class="absolute bottom-20 sm:bottom-32 md:bottom-40 left-10 sm:left-16 md:left-20 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-gradient-to-br from-blue-400 to-purple-500 dark:from-blue-600 dark:to-purple-600 rounded-full blur-3xl opacity-20 dark:opacity-10"></div>
+
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex items-center min-h-screen">
     <div class="w-full text-center">
-      <h1 class="text-7xl md:text-8xl font-bold text-gray-900 mb-8 tracking-tight">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 dark:text-white mb-8 tracking-tight">
         Innovation
-        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600">
+        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 dark:from-orange-400 dark:via-pink-400 dark:to-purple-500">
           Simplified
         </span>
       </h1>
-      <p class="text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-light">
+      <p class="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto font-light">
         The most intuitive way to build modern applications. Clean, fast, and beautifully designed.
       </p>
-      
+
       <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-        <a href="#" class="px-10 py-5 bg-gray-900 text-white rounded-2xl font-semibold hover:bg-gray-800 transition-colors text-lg">
+        <a href="#" class="px-10 py-5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-2xl font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors text-lg">
           Start Building
         </a>
-        <a href="#" class="px-10 py-5 bg-gray-100 text-gray-900 rounded-2xl font-semibold hover:bg-gray-200 transition-colors text-lg">
+        <a href="#" class="px-10 py-5 bg-gray-100 dark:bg-white/10 text-gray-900 dark:text-white rounded-2xl font-semibold hover:bg-gray-200 dark:hover:bg-white/20 transition-colors text-lg border dark:border-white/20">
           Watch Demo
         </a>
       </div>
-      
+
       <!-- Product showcase -->
       <div class="max-w-5xl mx-auto">
-        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-2 shadow-2xl">
-          <div class="bg-white rounded-2xl p-8 border border-gray-200">
+        <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-2 shadow-2xl">
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
             <div class="grid grid-cols-3 gap-4 mb-4">
-              <div class="h-3 bg-gradient-to-r from-orange-400 to-pink-500 rounded-full"></div>
-              <div class="h-3 bg-gray-200 rounded-full"></div>
-              <div class="h-3 bg-gray-200 rounded-full"></div>
+              <div class="h-3 bg-gradient-to-r from-orange-400 to-pink-500 dark:from-orange-500 dark:to-pink-600 rounded-full"></div>
+              <div class="h-3 bg-gray-200 dark:bg-slate-700 rounded-full"></div>
+              <div class="h-3 bg-gray-200 dark:bg-slate-700 rounded-full"></div>
             </div>
-            <div class="h-64 bg-gradient-to-br from-orange-100 via-pink-100 to-purple-100 rounded-xl"></div>
+            <div class="h-64 bg-gradient-to-br from-orange-100 via-pink-100 to-purple-100 dark:from-orange-900/20 dark:via-pink-900/20 dark:to-purple-900/20 rounded-xl"></div>
           </div>
         </div>
       </div>
@@ -862,45 +862,45 @@ export default function GradientHero() {
 </section>`,
     reactCode: `export default function MinimalistHero() {
   return (
-    <section className="relative min-h-screen bg-white overflow-hidden">
+    <section className="relative min-h-screen bg-white dark:bg-slate-950 overflow-hidden">
       {/* Subtle grid background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-      
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+
       {/* Gradient blob accents */}
-      <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full blur-3xl opacity-20"></div>
-      <div className="absolute bottom-40 left-20 w-96 h-96 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full blur-3xl opacity-20"></div>
-      
+      <div className="absolute top-20 sm:top-32 md:top-40 right-10 sm:right-16 md:right-20 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-gradient-to-br from-orange-400 to-pink-500 dark:from-orange-600 dark:to-pink-600 rounded-full blur-3xl opacity-20 dark:opacity-10"></div>
+      <div className="absolute bottom-20 sm:bottom-32 md:bottom-40 left-10 sm:left-16 md:left-20 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-gradient-to-br from-blue-400 to-purple-500 dark:from-blue-600 dark:to-purple-600 rounded-full blur-3xl opacity-20 dark:opacity-10"></div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex items-center min-h-screen">
         <div className="w-full text-center">
-          <h1 className="text-7xl md:text-8xl font-bold text-gray-900 mb-8 tracking-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 dark:text-white mb-8 tracking-tight">
             Innovation
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 dark:from-orange-400 dark:via-pink-400 dark:to-purple-500">
               Simplified
             </span>
           </h1>
-          <p className="text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-light">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto font-light">
             The most intuitive way to build modern applications. Clean, fast, and beautifully designed.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <a href="#" className="px-10 py-5 bg-gray-900 text-white rounded-2xl font-semibold hover:bg-gray-800 transition-colors text-lg">
+            <a href="#" className="px-10 py-5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-2xl font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors text-lg">
               Start Building
             </a>
-            <a href="#" className="px-10 py-5 bg-gray-100 text-gray-900 rounded-2xl font-semibold hover:bg-gray-200 transition-colors text-lg">
+            <a href="#" className="px-10 py-5 bg-gray-100 dark:bg-white/10 text-gray-900 dark:text-white rounded-2xl font-semibold hover:bg-gray-200 dark:hover:bg-white/20 transition-colors text-lg border dark:border-white/20">
               Watch Demo
             </a>
           </div>
-          
+
           {/* Product showcase */}
           <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-2 shadow-2xl">
-              <div className="bg-white rounded-2xl p-8 border border-gray-200">
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-2 shadow-2xl">
+              <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
                 <div className="grid grid-cols-3 gap-4 mb-4">
-                  <div className="h-3 bg-gradient-to-r from-orange-400 to-pink-500 rounded-full"></div>
-                  <div className="h-3 bg-gray-200 rounded-full"></div>
-                  <div className="h-3 bg-gray-200 rounded-full"></div>
+                  <div className="h-3 bg-gradient-to-r from-orange-400 to-pink-500 dark:from-orange-500 dark:to-pink-600 rounded-full"></div>
+                  <div className="h-3 bg-gray-200 dark:bg-slate-700 rounded-full"></div>
+                  <div className="h-3 bg-gray-200 dark:bg-slate-700 rounded-full"></div>
                 </div>
-                <div className="h-64 bg-gradient-to-br from-orange-100 via-pink-100 to-purple-100 rounded-xl"></div>
+                <div className="h-64 bg-gradient-to-br from-orange-100 via-pink-100 to-purple-100 dark:from-orange-900/20 dark:via-pink-900/20 dark:to-purple-900/20 rounded-xl"></div>
               </div>
             </div>
           </div>
@@ -978,12 +978,12 @@ export default function GradientHero() {
     featured: true,
     popular: false,
     isNew: true,
-    htmlCode: `<section class="relative min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 overflow-hidden flex items-center">
+    htmlCode: `<section class="relative min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-slate-950 dark:via-indigo-950 dark:to-purple-950 overflow-hidden flex items-center">
   <!-- Wave layers -->
   <div class="absolute inset-0">
     <svg class="absolute bottom-0 w-full h-full" viewBox="0 0 1440 800" preserveAspectRatio="none">
-      <path fill="url(#wave1)" fill-opacity="0.3" d="M0,400 C320,500 640,300 960,400 C1280,500 1440,400 1440,400 L1440,800 L0,800 Z"></path>
-      <path fill="url(#wave2)" fill-opacity="0.3" d="M0,500 C360,600 720,400 1080,500 C1440,600 1440,500 1440,500 L1440,800 L0,800 Z"></path>
+      <path class="dark:opacity-70" fill="url(#wave1)" fill-opacity="0.3" d="M0,400 C320,500 640,300 960,400 C1280,500 1440,400 1440,400 L1440,800 L0,800 Z"></path>
+      <path class="dark:opacity-70" fill="url(#wave2)" fill-opacity="0.3" d="M0,500 C360,600 720,400 1080,500 C1440,600 1440,500 1440,500 L1440,800 L0,800 Z"></path>
       <defs>
         <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" style="stop-color:#818CF8;stop-opacity:1" />
@@ -996,57 +996,57 @@ export default function GradientHero() {
       </defs>
     </svg>
   </div>
-  
+
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center z-10">
-    <div class="inline-block px-5 py-2 bg-white/60 backdrop-blur-sm rounded-full mb-8 border border-white/80">
-      <span class="text-indigo-700 font-semibold">🌊 Next Generation Platform</span>
+    <div class="inline-block px-5 py-2 bg-white/60 dark:bg-white/10 backdrop-blur-sm rounded-full mb-8 border border-white/80 dark:border-white/20">
+      <span class="text-indigo-700 dark:text-indigo-300 font-semibold">🌊 Next Generation Platform</span>
     </div>
-    
-    <h1 class="text-7xl md:text-8xl font-bold text-gray-900 mb-8">
+
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-900 dark:text-white mb-8">
       Ride the
-      <span class="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
+      <span class="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
         Wave of Innovation
       </span>
     </h1>
-    
-    <p class="text-2xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+
+    <p class="text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
       Dive into a world of possibilities with our cutting-edge platform designed for creators and innovators.
     </p>
-    
+
     <div class="flex flex-col sm:flex-row gap-6 justify-center">
-      <a href="#" class="px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all text-lg">
+      <a href="#" class="px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-500 text-white rounded-2xl font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all text-lg">
         Get Started Free
       </a>
-      <a href="#" class="px-10 py-5 bg-white/80 backdrop-blur-sm text-gray-900 rounded-2xl font-semibold hover:bg-white transition-colors border border-white/80 text-lg">
+      <a href="#" class="px-10 py-5 bg-white/80 dark:bg-white/10 backdrop-blur-sm text-gray-900 dark:text-white rounded-2xl font-semibold hover:bg-white dark:hover:bg-white/20 transition-colors border border-white/80 dark:border-white/20 text-lg">
         See How It Works
       </a>
     </div>
-    
+
     <!-- Stats -->
-    <div class="grid grid-cols-3 gap-8 max-w-3xl mx-auto mt-20">
-      <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80">
-        <div class="text-4xl font-bold text-indigo-600 mb-2">50K+</div>
-        <div class="text-gray-700 font-medium">Active Users</div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto mt-20">
+      <div class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80 dark:border-white/10">
+        <div class="text-4xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">50K+</div>
+        <div class="text-gray-700 dark:text-gray-300 font-medium">Active Users</div>
       </div>
-      <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80">
-        <div class="text-4xl font-bold text-purple-600 mb-2">99.9%</div>
-        <div class="text-gray-700 font-medium">Uptime</div>
+      <div class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80 dark:border-white/10">
+        <div class="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">99.9%</div>
+        <div class="text-gray-700 dark:text-gray-300 font-medium">Uptime</div>
       </div>
-      <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80">
-        <div class="text-4xl font-bold text-pink-600 mb-2">24/7</div>
-        <div class="text-gray-700 font-medium">Support</div>
+      <div class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80 dark:border-white/10">
+        <div class="text-4xl font-bold text-pink-600 dark:text-pink-400 mb-2">24/7</div>
+        <div class="text-gray-700 dark:text-gray-300 font-medium">Support</div>
       </div>
     </div>
   </div>
 </section>`,
     reactCode: `export default function WaveHero() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 overflow-hidden flex items-center">
+    <section className="relative min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-slate-950 dark:via-indigo-950 dark:to-purple-950 overflow-hidden flex items-center">
       {/* Wave layers */}
       <div className="absolute inset-0">
         <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1440 800" preserveAspectRatio="none">
-          <path fill="url(#wave1)" fillOpacity="0.3" d="M0,400 C320,500 640,300 960,400 C1280,500 1440,400 1440,400 L1440,800 L0,800 Z"></path>
-          <path fill="url(#wave2)" fillOpacity="0.3" d="M0,500 C360,600 720,400 1080,500 C1440,600 1440,500 1440,500 L1440,800 L0,800 Z"></path>
+          <path className="dark:opacity-70" fill="url(#wave1)" fillOpacity="0.3" d="M0,400 C320,500 640,300 960,400 C1280,500 1440,400 1440,400 L1440,800 L0,800 Z"></path>
+          <path className="dark:opacity-70" fill="url(#wave2)" fillOpacity="0.3" d="M0,500 C360,600 720,400 1080,500 C1440,600 1440,500 1440,500 L1440,800 L0,800 Z"></path>
           <defs>
             <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" style={{stopColor:'#818CF8',stopOpacity:1}} />
@@ -1059,45 +1059,45 @@ export default function GradientHero() {
           </defs>
         </svg>
       </div>
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center z-10">
-        <div className="inline-block px-5 py-2 bg-white/60 backdrop-blur-sm rounded-full mb-8 border border-white/80">
-          <span className="text-indigo-700 font-semibold">🌊 Next Generation Platform</span>
+        <div className="inline-block px-5 py-2 bg-white/60 dark:bg-white/10 backdrop-blur-sm rounded-full mb-8 border border-white/80 dark:border-white/20">
+          <span className="text-indigo-700 dark:text-indigo-300 font-semibold">🌊 Next Generation Platform</span>
         </div>
-        
-        <h1 className="text-7xl md:text-8xl font-bold text-gray-900 mb-8">
+
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-900 dark:text-white mb-8">
           Ride the
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
             Wave of Innovation
           </span>
         </h1>
-        
-        <p className="text-2xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
           Dive into a world of possibilities with our cutting-edge platform designed for creators and innovators.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <a href="#" className="px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all text-lg">
+          <a href="#" className="px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-500 text-white rounded-2xl font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all text-lg">
             Get Started Free
           </a>
-          <a href="#" className="px-10 py-5 bg-white/80 backdrop-blur-sm text-gray-900 rounded-2xl font-semibold hover:bg-white transition-colors border border-white/80 text-lg">
+          <a href="#" className="px-10 py-5 bg-white/80 dark:bg-white/10 backdrop-blur-sm text-gray-900 dark:text-white rounded-2xl font-semibold hover:bg-white dark:hover:bg-white/20 transition-colors border border-white/80 dark:border-white/20 text-lg">
             See How It Works
           </a>
         </div>
-        
+
         {/* Stats */}
-        <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto mt-20">
-          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80">
-            <div className="text-4xl font-bold text-indigo-600 mb-2">50K+</div>
-            <div className="text-gray-700 font-medium">Active Users</div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto mt-20">
+          <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80 dark:border-white/10">
+            <div className="text-4xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">50K+</div>
+            <div className="text-gray-700 dark:text-gray-300 font-medium">Active Users</div>
           </div>
-          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80">
-            <div className="text-4xl font-bold text-purple-600 mb-2">99.9%</div>
-            <div className="text-gray-700 font-medium">Uptime</div>
+          <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80 dark:border-white/10">
+            <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">99.9%</div>
+            <div className="text-gray-700 dark:text-gray-300 font-medium">Uptime</div>
           </div>
-          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80">
-            <div className="text-4xl font-bold text-pink-600 mb-2">24/7</div>
-            <div className="text-gray-700 font-medium">Support</div>
+          <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-2xl p-6 border border-white/80 dark:border-white/10">
+            <div className="text-4xl font-bold text-pink-600 dark:text-pink-400 mb-2">24/7</div>
+            <div className="text-gray-700 dark:text-gray-300 font-medium">Support</div>
           </div>
         </div>
       </div>
