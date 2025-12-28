@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-neutral-200/60">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-16">
           {/* Logo - Refined */}
           <Link href="/" className="flex items-center gap-2 group">
